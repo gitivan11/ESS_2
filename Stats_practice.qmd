@@ -1,0 +1,308 @@
+$$
+f_X(x)
+=
+\frac{\theta 2^\theta}{x^{\theta+1}}
+\mathbf{1}_{[2,+\infty)}(x)
+$$
+
+## (a) Find a complete sufficient statistic
+
+**Solution:**
+
+$$
+S = \sum_i \ln X_i
+\quad
+\text{is complete and sufficient by the property of a full-rank exponential family.}
+$$
+
+## (b) Find MLE $\hat{\theta}$
+
+**Solution:**
+
+$$
+\begin{aligned}
+\text{(1)} \qquad &
+\ell(\theta)
+=
+n\ln\theta
++
+n\theta\ln2
+-
+(\theta+1)\sum_i\ln x_i
+\\[1em]
+\text{(2)} \qquad &
+\frac{\partial\ell(\theta)}{\partial\theta}
+=
+0
+\quad\implies\quad
+{\color{red}
+\boxed{
+\color{black}
+\hat{\theta}_{\mathrm{MLE}}
+=
+\frac{n}{\sum_i\ln(X_i/2)}
+}}
+\end{aligned}
+$$
+
+## (c) Is $\hat{\theta}$ unbiased? + MSE
+
+**Solution:**
+
+$$
+\begin{array}{ll}
+\text{(1) Find the distribution of }Y=\ln X
+&
+\\[0.5em]
+\text{(1.1) Intermediate calculations:}
+&
+x=e^y,
+\qquad
+\displaystyle\frac{\partial x}{\partial y}=e^y
+\\[0.5em]
+&
+\displaystyle
+f_Y(y)
+=
+f_X(e^y)
+\left|
+\frac{\partial x}{\partial y}
+\right|
+\\[0.5em]
+&
+\displaystyle
+=
+\frac{\theta 2^\theta}
+{e^{y(\theta+1)}}
+e^y
+\mathbf{1}_{[\ln2,+\infty)}(y)
+\\[0.5em]
+&
+\displaystyle
+=
+\theta 2^\theta e^{-\theta y}
+\mathbf{1}_{[\ln2,+\infty)}(y)
+\\[0.5em]
+&
+\displaystyle
+\implies
+Y\sim\mathrm{Ga}(1,\theta)
+\\[1em]
+\text{(2) Distribution of }\sum_i Y_i=S:
+&
+{\color{red}
+\boxed{
+\color{black}
+S\sim\mathrm{Ga}(n,\theta)
+}}
+\\[1em]
+\text{(3) Expectation of }S^{-1}:
+&
+\displaystyle
+\int_{2n\ln2}^{\infty}
+s^{n-2}e^{-\theta s}\,ds
+=
+C
+\times
+\underbrace{
+\int_{2\ln2}^{\infty}
+A s^{n-2}e^{-\theta s}\,ds
+}_{=\,1,\ \text{since this is a density}}
+\\[0.5em]
+&
+\displaystyle
+\text{where }
+C
+=
+\frac{\Gamma(n-1)}{\Gamma(n)}
+\frac{\theta^n}{\theta^{n-1}}
+=
+\frac{\theta}{n-1}
+\\[1em]
+\text{(4) Final expression:}
+&
+{\color{red}
+\boxed{
+\color{black}
+\mathbb{E}\!\left[\hat{\theta}_{\mathrm{MLE}}\right]
+=
+\frac{n\theta}{n-1}
+}} \implies \text{ the estimator is biased.}\\[0.5em]
+\text{ (5) MSE:}& \mathrm{MSE}(\hat{\theta}) = \mathrm{Bias}^2(\hat{\theta}) + \mathrm{Var}(\hat{\theta})\\[0.5em]
+\text{ (5.1) Calc second momemt:}& \mathbb{E}(S^{-2}) \underbrace{=}_{\text{if} n>2} \frac{\theta^2}{(n-1)(n-2)} \implies \mathbb{E}(\hat{\theta}^2_{\mathrm{MLE}}) = \frac{n^2 \theta^2}{(n-1)(n-2)} \implies \mathrm{Var} (\hat{\theta}) = \frac{n^2 \theta^2}{(n-1)(n-2)} - \frac{n^2 \theta^2}{(n-1)^2} = \frac{n^2 \theta^2}{(n-1)^2 (n-2)} \implies \\[0.5em]
+\implies \mathrm{MSE}(\hat{\theta}) = \frac{n^2 \theta^2}{(n-1)^2 (n-2)} + \frac{\theta^2}{(n-1)^2} = \frac{(n+2)(n-1)\theta^2}{(n-1)^2 (n-2)} = {\color{red}\boxed{\color{black}{\frac{n+2}{(n-1)(n-2)} \theta}}}
+\end{array}
+$$
+
+## (d) obtain asymptotic interval for $x_m$ ##
+$$
+\begin{array}{ll}
+\text{ (1) asymptotic var prop }:& \hat{\theta} \text{ is MLE } \implies 2^{1 + \frac{1}{\hat{\theta}}} \text{ is MLE } for 2^{1 + \frac{1}{\theta}}\\[0.5em]
+\text{ (2) By CLT + asymptotic prop of MLE:}& \hat{\theta} \sim \mathcal{N}(\theta, \frac{1}{I_{\underline{X}}(\theta)})\\[0.5em]
+\text{ (3) By Delta method, } \tilde{\theta} = g(\hat{\theta}) \sim \mathcal{N}(g(\theta), \frac{(g'(\theta))^2}{I_{\underline{X}}(\theta)}) \text{ where } (g'(\theta ))^2 = (2^{1 + \frac{1}{\theta}} \ln 2 (-1) \frac{1}{\theta^2})^2 = 2^{2(1 + \frac{1}{\theta})} (\ln 2)^2 \frac{1}{\theta^4}\\[0.5em]
+\text{ (4) now obtain Fischer for the sample}& 
+I_{\underline{X}}(\theta) = - \mathbb{E}(\frac{\partial^2 \ell }{\partial {\theta}^2}) = \frac{n}{\theta^2}\\[0.5em]
+\text{ (5) now calculate the asympt variance}& \mathrm{Avar}(\tilde{\theta}) = 2^{2(1 + \frac{1}{\theta})} (\ln 2)^2 \frac{1}{n \theta^2} \implies x_m \in \tilde{\theta} \pm z_{\alpha/2} \frac{2^{1 + \frac{1}{\hat{\theta}} \ln 2}}{\hat{\theta} \sqrt{n}}
+\end{array}
+$$
+
+## Practice the graph ## 
+
+```{python}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 4
+#| fig-align: center
+#| output: true
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Important x-coordinates
+x_axis_start = 0.0
+k_alpha = 1.75
+theta_0 = 2.65
+x_axis_end = 4.15
+
+# Increasing curve, defined up to theta_0
+x = np.linspace(x_axis_start, theta_0, 400)
+lam = 0.08 + 0.18 * np.exp(1.55 * (x - 1.15))
+
+# Value lambda* attained at k_alpha
+lambda_star = (
+    0.08 + 0.18 * np.exp(1.55 * (k_alpha - 1.15))
+)
+
+# Curve height immediately before theta_0
+curve_top = lam[-1]
+
+blue = "#4055ff"
+purple = "#8b008b"
+
+fig, ax = plt.subplots(figsize=(8, 4))
+
+# Increasing purple curve
+ax.plot(x, lam, color=purple, linewidth=2.2)
+
+# Purple horizontal segment after theta_0
+ax.plot(
+    [theta_0, x_axis_end],
+    [0, 0],
+    color=purple,
+    linewidth=2.2
+)
+
+# Coordinate axes with arrowheads
+ax.annotate(
+    "",
+    xy=(x_axis_end, 0),
+    xytext=(-0.30, 0),
+    arrowprops=dict(arrowstyle="->", color=blue, linewidth=1.2),
+)
+
+ax.annotate(
+    "",
+    xy=(0, 2.35),
+    xytext=(0, -0.40),
+    arrowprops=dict(arrowstyle="->", color=blue, linewidth=1.2),
+)
+
+# Dashed construction lines
+ax.hlines(
+    lambda_star,
+    xmin=0,
+    xmax=x_axis_end - 0.1,
+    colors=blue,
+    linestyles=(0, (5, 5)),
+    linewidth=1,
+)
+
+ax.vlines(
+    k_alpha,
+    ymin=0,
+    ymax=lambda_star,
+    colors=blue,
+    linestyles=(0, (5, 5)),
+    linewidth=1,
+)
+
+ax.vlines(
+    theta_0,
+    ymin=0,
+    ymax=curve_top,
+    colors=blue,
+    linestyles=(0, (5, 5)),
+    linewidth=1,
+)
+
+# Mathematical labels
+ax.text(
+    -0.07,
+    lambda_star,
+    r"$\lambda^*$",
+    color=blue,
+    fontsize=16,
+    ha="right",
+    va="center",
+)
+
+ax.text(
+    k_alpha,
+    -0.14,
+    r"$k_\alpha$",
+    color=blue,
+    fontsize=16,
+    ha="center",
+    va="top",
+)
+
+ax.text(
+    theta_0,
+    -0.14,
+    r"$\theta_0$",
+    color=blue,
+    fontsize=16,
+    ha="center",
+    va="top",
+)
+
+ax.text(
+    x_axis_end,
+    -0.13,
+    r"$\widehat{\theta}$",
+    color=blue,
+    fontsize=17,
+    ha="center",
+    va="top",
+)
+
+ax.text(
+    -0.05,
+    2.35,
+    r"$\Lambda$",
+    color=blue,
+    fontsize=17,
+    ha="right",
+    va="center",
+)
+
+# Title-like annotation
+fig.text(
+    0.03,
+    0.93,
+    r"$H_0\ \mathrm{if}\ \Lambda<\lambda^*:$",
+    color=blue,
+    fontsize=17,
+)
+
+# Schematic formatting
+ax.set_xlim(-0.35, 4.35)
+ax.set_ylim(-0.42, 2.50)
+ax.axis("off")
+
+plt.show()
+```
+
+ 
+
+

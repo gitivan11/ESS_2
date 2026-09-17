@@ -1,0 +1,9 @@
+# Sets
+
+### Proposition (well-ordering)
+
+*Every nonempty set X can be well ordered*.
+
+Proof:
+
+1.  Let X be non-empty, order it by inclusion. Let $\mathcal{C} = \{ x \in X: x \in E_i \}$ the collection $\{ E_i \}$ is a partially ordered collection of subsets of X. By Hausdorff maximal principle, there is a maximal linearly ordered subset of X, call it $E_{max}$, clearly $E_{max} \subseteq \{ E_i \}$ .

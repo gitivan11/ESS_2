@@ -1,0 +1,16 @@
+/.quarto/
+**/*.quarto_ipynb
+
+*
+# Still traverse folders, so exceptions work inside subfolders
+!*/
+
+# Keep this ignore file itself
+!.gitignore
+
+# Allow these file types
+!*.qmd
+!*.tex
+!*.bib
+!*.py
+!*.ipynb
