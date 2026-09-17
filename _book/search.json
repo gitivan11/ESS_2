@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "Stats_practice.html",
+    "href": "Stats_practice.html",
+    "title": "8  f_X(x)",
+    "section": "",
+    "text": "8.1 (a) Find a complete sufficient statistic\n\\[\n\\frac{\\theta 2^\\theta}{x^{\\theta+1}}\n\\mathbf{1}_{[2,+\\infty)}(x)\n\\]\nSolution:\n\\[\nS = \\sum_i \\ln X_i\n\\quad\n\\text{is complete and sufficient by the property of a full-rank exponential family.}\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>f_X(x)</span>"
+    ]
+  },
+  {
+    "objectID": "Stats_practice.html#b-find-mle-hattheta",
+    "href": "Stats_practice.html#b-find-mle-hattheta",
+    "title": "8  f_X(x)",
+    "section": "8.2 (b) Find MLE \\(\\hat{\\theta}\\)",
+    "text": "8.2 (b) Find MLE \\(\\hat{\\theta}\\)\nSolution:\n\\[\n\\begin{aligned}\n\\text{(1)} \\qquad &\n\\ell(\\theta)\n=\nn\\ln\\theta\n+\nn\\theta\\ln2\n-\n(\\theta+1)\\sum_i\\ln x_i\n\\\\[1em]\n\\text{(2)} \\qquad &\n\\frac{\\partial\\ell(\\theta)}{\\partial\\theta}\n=\n0\n\\quad\\implies\\quad\n{\\color{red}\n\\boxed{\n\\color{black}\n\\hat{\\theta}_{\\mathrm{MLE}}\n=\n\\frac{n}{\\sum_i\\ln(X_i/2)}\n}}\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>f_X(x)</span>"
+    ]
+  },
+  {
+    "objectID": "Stats_practice.html#c-is-hattheta-unbiased-mse",
+    "href": "Stats_practice.html#c-is-hattheta-unbiased-mse",
+    "title": "8  f_X(x)",
+    "section": "8.3 (c) Is \\(\\hat{\\theta}\\) unbiased? + MSE",
+    "text": "8.3 (c) Is \\(\\hat{\\theta}\\) unbiased? + MSE\nSolution:\n\\[\n\\begin{array}{ll}\n\\text{(1) Find the distribution of }Y=\\ln X\n&\n\\\\[0.5em]\n\\text{(1.1) Intermediate calculations:}\n&\nx=e^y,\n\\qquad\n\\displaystyle\\frac{\\partial x}{\\partial y}=e^y\n\\\\[0.5em]\n&\n\\displaystyle\nf_Y(y)\n=\nf_X(e^y)\n\\left|\n\\frac{\\partial x}{\\partial y}\n\\right|\n\\\\[0.5em]\n&\n\\displaystyle\n=\n\\frac{\\theta 2^\\theta}\n{e^{y(\\theta+1)}}\ne^y\n\\mathbf{1}_{[\\ln2,+\\infty)}(y)\n\\\\[0.5em]\n&\n\\displaystyle\n=\n\\theta 2^\\theta e^{-\\theta y}\n\\mathbf{1}_{[\\ln2,+\\infty)}(y)\n\\\\[0.5em]\n&\n\\displaystyle\n\\implies\nY\\sim\\mathrm{Ga}(1,\\theta)\n\\\\[1em]\n\\text{(2) Distribution of }\\sum_i Y_i=S:\n&\n{\\color{red}\n\\boxed{\n\\color{black}\nS\\sim\\mathrm{Ga}(n,\\theta)\n}}\n\\\\[1em]\n\\text{(3) Expectation of }S^{-1}:\n&\n\\displaystyle\n\\int_{2n\\ln2}^{\\infty}\ns^{n-2}e^{-\\theta s}\\,ds\n=\nC\n\\times\n\\underbrace{\n\\int_{2\\ln2}^{\\infty}\nA s^{n-2}e^{-\\theta s}\\,ds\n}_{=\\,1,\\ \\text{since this is a density}}\n\\\\[0.5em]\n&\n\\displaystyle\n\\text{where }\nC\n=\n\\frac{\\Gamma(n-1)}{\\Gamma(n)}\n\\frac{\\theta^n}{\\theta^{n-1}}\n=\n\\frac{\\theta}{n-1}\n\\\\[1em]\n\\text{(4) Final expression:}\n&\n{\\color{red}\n\\boxed{\n\\color{black}\n\\mathbb{E}\\!\\left[\\hat{\\theta}_{\\mathrm{MLE}}\\right]\n=\n\\frac{n\\theta}{n-1}\n}} \\implies \\text{ the estimator is biased.}\\\\[0.5em]\n\\text{ (5) MSE:}& \\mathrm{MSE}(\\hat{\\theta}) = \\mathrm{Bias}^2(\\hat{\\theta}) + \\mathrm{Var}(\\hat{\\theta})\\\\[0.5em]\n\\text{ (5.1) Calc second momemt:}& \\mathbb{E}(S^{-2}) \\underbrace{=}_{\\text{if} n&gt;2} \\frac{\\theta^2}{(n-1)(n-2)} \\implies \\mathbb{E}(\\hat{\\theta}^2_{\\mathrm{MLE}}) = \\frac{n^2 \\theta^2}{(n-1)(n-2)} \\implies \\mathrm{Var} (\\hat{\\theta}) = \\frac{n^2 \\theta^2}{(n-1)(n-2)} - \\frac{n^2 \\theta^2}{(n-1)^2} = \\frac{n^2 \\theta^2}{(n-1)^2 (n-2)} \\implies \\\\[0.5em]\n\\implies \\mathrm{MSE}(\\hat{\\theta}) = \\frac{n^2 \\theta^2}{(n-1)^2 (n-2)} + \\frac{\\theta^2}{(n-1)^2} = \\frac{(n+2)(n-1)\\theta^2}{(n-1)^2 (n-2)} = {\\color{red}\\boxed{\\color{black}{\\frac{n+2}{(n-1)(n-2)} \\theta}}}\n\\end{array}\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>f_X(x)</span>"
+    ]
+  },
+  {
+    "objectID": "adv_macro.html",
+    "href": "adv_macro.html",
+    "title": "1  Lecture 1: Hank model ##",
+    "section": "",
+    "text": "$$",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lecture 1: Hank model ##</span>"
+    ]
+  },
+  {
+    "objectID": "comp_stats.html",
+    "href": "comp_stats.html",
+    "title": "3  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "Stats_practice.html#d-obtain-asymptotic-interval-for-x_m",
+    "href": "Stats_practice.html#d-obtain-asymptotic-interval-for-x_m",
+    "title": "8  f_X(x)",
+    "section": "8.4 (d) obtain asymptotic interval for \\(x_m\\)",
+    "text": "8.4 (d) obtain asymptotic interval for \\(x_m\\)\n\\[\n\\begin{array}{ll}\n\\text{ (1) asymptotic var prop }:& \\hat{\\theta} \\text{ is MLE } \\implies 2^{1 + \\frac{1}{\\hat{\\theta}}} \\text{ is MLE } for 2^{1 + \\frac{1}{\\theta}}\\\\[0.5em]\n\\text{ (2) By CLT + asymptotic prop of MLE:}& \\hat{\\theta} \\sim \\mathcal{N}(\\theta, \\frac{1}{I_{\\underline{X}}(\\theta)})\\\\[0.5em]\n\\text{ (3) By Delta method, } \\tilde{\\theta} = g(\\hat{\\theta}) \\sim \\mathcal{N}(g(\\theta), \\frac{(g'(\\theta))^2}{I_{\\underline{X}}(\\theta)}) \\text{ where } (g'(\\theta ))^2 = (2^{1 + \\frac{1}{\\theta}} \\ln 2 (-1) \\frac{1}{\\theta^2})^2 = 2^{2(1 + \\frac{1}{\\theta})} (\\ln 2)^2 \\frac{1}{\\theta^4}\\\\[0.5em]\n\\text{ (4) now obtain Fischer for the sample}&\nI_{\\underline{X}}(\\theta) = - \\mathbb{E}(\\frac{\\partial^2 \\ell }{\\partial {\\theta}^2}) = \\frac{n}{\\theta^2}\\\\[0.5em]\n\\text{ (5) now calculate the asympt variance}& \\mathrm{Avar}(\\tilde{\\theta}) = 2^{2(1 + \\frac{1}{\\theta})} (\\ln 2)^2 \\frac{1}{n \\theta^2} \\implies x_m \\in \\tilde{\\theta} \\pm z_\\alpha \\frac{2^{1 + \\frac{1}{\\theta}} (\\ln 2)^2}{\\theta \\sqrt{n}}\n\\end{array}\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>f_X(x)</span>"
+    ]
+  },
+  {
+    "objectID": "real_anal.html",
+    "href": "real_anal.html",
+    "title": "6  Sets #",
+    "section": "",
+    "text": "::: {#prp - cardinality}\n[ card(X) card(Y) iff card(Y) card(X) ]\n:::",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Sets #</span>"
+    ]
+  }
+]

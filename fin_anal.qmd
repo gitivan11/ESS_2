@@ -1,0 +1,129 @@
+## Intro ## 
+
+- Virtual meetings for group project 
+- 50% group proj + 10% group short assigment + 10% group led case discussions + 30% written exam. 
+
+
+# Lec. 1: income statement analysis ## 
+
+Types of investments: liquidity vs strategic
+
+- Liquidity: bonds, stocks
+- Strategic: loans + equity interest in other companies.
+- Investment in subsidiaries - operating investments? 
+- In fin statements: subsidiaries fully consolidated, associates -> equity method, joint arrangements (joint operator and joint venturer - **clarify these terms**)
+- **Associate vs subsidiary** - explain difference. **ANSWER**: associate - significant influence but no control, subsidiary - control. 
+- **What if we consolidate associates intead of using equity method?** - *equity method - clarify*. 
+
+**Clarification**: 
+Equity requires recording only net assets of the joint company in the balance sheet, as opposed to assets and liabailities.
+
+
+
+
+## Equity method ## 
+
+- using equity over consildation affects (positively) ratios (debt to equity lower. ROA + ROS higher)
+- IFRS 8: 
+## Back to classification of activities ## 
+
+- Non core operating activities - ancillary to the core operating activities, ex.: merchandising/fundraising, gains from disposal of players for a football company, royalties for manufacturing company
+- Example in sheet (**not clear**)
+- Unusual items - non-recurrent items (non underlying, i.e.) - diclosed separately in icnome statements. 
+
+**Rationale**: 
+
+separate unusual from continuos operations 
+
+
+**Definition**: 
+
+- violate mathcing principle (when income or expense rtelated to events in past years)
+- unusual in nature (not common for industry/business)
+- infrequent events (ex.: accident, disposal of business\equipment etc.)
+- depends on the context of the industry! for instance if litigation is common, neither unusual nor infrequent. 
+-OCI items (revaluation from fair value adjustment, complex estimates etc.)
+Statement of income -> net income -> othe comprehensive income
+- Used when differing valuation affects balance sheet but not reflected in net income (**ex: revaluation**) - but not in all cases (ex: accounting for financial derivatives)
+
+**Clarification from CFA**: 
+
+## Trend analysis ## 
+
+- recurring vs non recurring
+- discretionary
+- anomalous (red flags)
+
+**techniques**
+- bridge analysis (explain)
+- stacked bar
+
+# Lecture 2: focus on operating income #
+
+
+# Lecture 3 #
+
+
+## Balance sheet format ##
+
+- Managerial vs liquidity
+- Liquidity = fewer than vs longer than 12 months
+- Managerial - operating vs non operating activities
+
+## Current assets/liabilities ##
+
+- accoridng to IAS3, not only overlap with short term (liquidity) OR current (operating) (managerial) - **hybrid definition**, based on time but also length of business cycle
+- The definition relies on **realizing within business cycle** or 12 montths after reporting (thats the only overlap)
+- professional analaysts use managerial = better!
+- Investment properties classified as non current operating assets.
+
+## Cash and Cash equivalents ## 
+
+- classified as non operating
+
+## Ways to analyze th debts
+
+- **net debts** (difference iin total debts/assets), used for modigliani miller (view decomp)
+- **net financial position** (total debt - cash - short term fin assets) minus net short term financial debts (used as upper bound on to ebitda ratios, also to define cost of debt $K_d$)
+- **net short term fin debt** (short term debt less cash less short term fin assets) , used for assessing the short term perspective
+
+## Current operating liabilities ## 
+
+- Why current? not time, but normal and recurrent operating cycle - if the liability is recurrent, can be short term or long term! **current = recurrent**
+
+## Example: dell technologies ## 
+
+- long term investments are current assets also     
+- NOWC/Revenues tends to be stable because tied to sales. 
+
+## Tax assets and liabilities ## 
+
+- include total tax position as a separate liabilities category 
+- classify tax assets to current operating assets, tax liabilities into operating liabilities category
+
+## Helf for sale assets/liabilities ##
+
+- best way: put in non operating so doesnt affect net operating assets (dont confuse with held for sale!)
+
+## Summary of importan metrics from managerial format ##
+
+- NOWC
+- gross and net invested capital 
+- gross and net operateing invested capital 
+- **Clarify**!!
+
+ - debt to equity
+ - financial debt to equity - only financial 
+ - debt to assets 
+ - NFP to equity 
+ - NFO to equity
+
+## Minorities interests ## 
+
+- FD/ NE of parent  is **fin leverage**, NE/NE_parent is the **shareholding leverage**
+
+## Goodwill and intangibles ## 
+
+- mismatch between impairment vs amortization cost - if no impairment, amount of intangibles is not adjusted and a relevant portion of assets is frozen. 
+- adjust: adjusted total assets (remove goodwill), adjusted net equity (net equity - goodwill)
+- ratios like Assets/equity, net income/quity. net income/total assets all increase due to denominator decline. 

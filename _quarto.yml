@@ -1,0 +1,31 @@
+project:
+  type: book
+
+book:
+  title: "ESS_2"
+  author: "gitivan"
+  date: "08/08/2026"
+  chapters:
+    - index.qmd
+    - adv_macro.qmd
+    - comp_finance.qmd
+    - comp_stats.qmd
+    - econ_crime.qmd
+    - fin_anal.qmd
+    - real_anal.qmd
+    - intro_stat_learning.qmd
+    - Stats_practice.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+  pdf:
+    documentclass: scrreprt
+
+
+
