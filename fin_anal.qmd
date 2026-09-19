@@ -127,3 +127,52 @@ Statement of income -> net income -> othe comprehensive income
 - mismatch between impairment vs amortization cost - if no impairment, amount of intangibles is not adjusted and a relevant portion of assets is frozen. 
 - adjust: adjusted total assets (remove goodwill), adjusted net equity (net equity - goodwill)
 - ratios like Assets/equity, net income/quity. net income/total assets all increase due to denominator decline. 
+
+# lecture 6: DuPont formula #
+
+## ROE decomposition: Modigliani-Miller ## 
+
+$$
+\mathrm{ROE}
+=
+\frac{\text{Comprehensive Income}}{\text{Net Equity}}
+=
+\frac{\text{Operating Income}}{\text{Invested Capital}}
++
+\left(
+\frac{\text{Operating Income}}{\text{Invested Capital}}
+-
+\frac{\text{Financial Expenses}}{\text{Total Liabilities}}
+\right)
+\times
+\frac{\text{Total Liabilities}}{\text{Net Equity}}
+\times
+\frac{\text{Comprehensive Income}}
+{\text{Income before Unusual Items and Taxes}}
+$$
+
+- Comment: the difference in operating profitability and expenses defines whether the company is profitable (ROE positive)
+- Second technical adjustment: we substract total liabilities from total assets to arrive at net results ("clean" from financial income streams). 
+
+## Operating liability leverage ## 
+
+- Prof Penman proposal: use NOPAT (ne operating profit after tax) instead of operating income 
+- Decompose NOPAT/Net operating invested capital into NOPAT over gross operating invested capital and diff between nopat ratio and short term borrowing. 
+- Operative liability x Short term interest rates are the implicit cost, which are then added to NOPAT
+- Interest rate: either market or short term interest expenses/st fin liabilities
+- **Modigliani-Miller, ROE decomposition** (explain)
+- **special cases**: fin assets exceed fin liabilities, net operating invested capital negative (net operating liabilities exceed net assets)
+
+## Changes in net equity and effects on ROE ##
+
+Changes of net equity depend: 
+- on economic performance: net income vs OCI 
+- shareholder transactions (buybacks, new insuance)
+- acquisitions, changes in ownership with no loss of control, loss of control. 
+
+**what of extreme cases**? 
+
+- if net operating assets negative: use gross operating assets instead! Does not maket sense to use net operating assets in decomposition since multiplied by short term interest rate, adds value! 
+- **DCF vs EVA**: 
+- From final example: use financial expenses instead on net expenses to arrive to a "good" number
+
