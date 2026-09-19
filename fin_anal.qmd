@@ -8,6 +8,7 @@
 
 Types of investments: liquidity vs strategic
 
+
 - Liquidity: bonds, stocks
 - Strategic: loans + equity interest in other companies.
 - Investment in subsidiaries - operating investments? 
@@ -18,8 +19,27 @@ Types of investments: liquidity vs strategic
 **Clarification**: 
 Equity requires recording only net assets of the joint company in the balance sheet, as opposed to assets and liabailities.
 
+## Types of analysis ## 
+
+- Competitor 
+- Credit analysis - repay on time 
+- Equity analysis - cash flows, growth, risk 
+- Audit and fraud analysis 
+
+##
+
+## Types of investments: liquidity vs strategic ## 
 
 
+- Liquidity: bonds, stocks
+- Strategic: loans + equity interest in other companies.
+- Investment in subsidiaries - operating investments? 
+- In fin statements: subsidiaries fully consolidated, associates -> equity method, joint arrangements (joint operator and joint venturer - **clarify these terms**)
+- **Associate vs subsidiary** - explain difference. **ANSWER**: associate - significant influence but no control, subsidiary - control. 
+- **What if we consolidate associates intead of using equity method?** - *equity method - clarify*. 
+
+**Clarification**: 
+Equity requires recording only net assets of the joint company in the balance sheet, as opposed to assets and liabailities.
 
 ## Equity method ## 
 
