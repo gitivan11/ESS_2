@@ -26,10 +26,7 @@ Equity requires recording only net assets of the joint company in the balance sh
 - Equity analysis - cash flows, growth, risk 
 - Audit and fraud analysis 
 
-##
-
 ## Types of investments: liquidity vs strategic ## 
-
 
 - Liquidity: bonds, stocks
 - Strategic: loans + equity interest in other companies.
@@ -39,7 +36,7 @@ Equity requires recording only net assets of the joint company in the balance sh
 - **What if we consolidate associates intead of using equity method?** - *equity method - clarify*. 
 
 **Clarification**: 
-Equity requires recording only net assets of the joint company in the balance sheet, as opposed to assets and liabailities.
+Equity requires recording only net assets of the joint company in the balance sheet, as opposed to assets and liabailities. Also applies to majority interests.
 
 ## Equity method ## 
 
@@ -48,7 +45,7 @@ Equity requires recording only net assets of the joint company in the balance sh
 ## Back to classification of activities ## 
 
 - Non core operating activities - ancillary to the core operating activities, ex.: merchandising/fundraising, gains from disposal of players for a football company, royalties for manufacturing company
-- Example in sheet (**not clear**)
+- **Two types**: ancillary vs financial and investment prop
 - Unusual items - non-recurrent items (non underlying, i.e.) - diclosed separately in icnome statements. 
 
 **Rationale**: 
@@ -66,7 +63,36 @@ separate unusual from continuos operations
 Statement of income -> net income -> othe comprehensive income
 - Used when differing valuation affects balance sheet but not reflected in net income (**ex: revaluation**) - but not in all cases (ex: accounting for financial derivatives)
 
-**Clarification from CFA**: 
+
+## Python practice ## 
+
+```{python}
+#| echo: false 
+#| warning: false
+
+import pandas as pd 
+
+
+df = pd.DataFrame(
+     {
+        "2000": [100789, 98836, 1953, None, 87, 146, 121, 212, -37, 2482],
+        "1999": [40112, 39310, 802, None, 309, 541, 0, 162, 181, 1995],
+        "1998": [31260, 29882, 1378, None, 97, 56, 0, 88, -37, 1582],
+    }, 
+``` 
+
+## 4 types of variation in IS ## 
+
+- recurring vs non recurring (normal)
+- discretion and possible red flags (fraud)
+
+## OCI items ## 
+
+- revalaution surplus changes
+- remeasurements of benefit plans 
+- translations (currency differences)
+- fair value remeasurement changes 
+- gains and losses on hedging instruments
 
 ## Trend analysis ## 
 
@@ -75,10 +101,16 @@ Statement of income -> net income -> othe comprehensive income
 - anomalous (red flags)
 
 **techniques**
-- bridge analysis (explain)
-- stacked bar
+- bridge analysis: 
+- stacked bar chart
+- CAGR 
 
 # Lecture 2: focus on operating income #
+
+## Three formats ## 
+
+Gross profit/added value vs contribution margin (net revenues - variable costs)
+
 
 
 # Lecture 3 #
