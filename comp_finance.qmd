@@ -291,11 +291,209 @@ $$
 $$E^Q [\tilde{V}_X(t)] = E^Q [\tilde{V}_E(t)] + E^Q [EEP(t)] 
 $$ where the latter term is *decreasing* in t and the former is constant. 
 
-- Using the supermartingale property and taking expecations, we get:
-
-
-$$E^Q(\tilde{V}_X (t_1) ) \geq E^Q (\tilde{V}_X (t_2)) \quad t_2 > t_1
+$$ E^Q(\tilde{V}_X (t_1) ) \geq E^Q (\tilde{V}_X (t_2)) \quad t_2 > t_1
 $$
 
-**Why?** 
+# Lecture 4 # 
 
+## Recap of concepts ## 
+- Recap: $r \in \{ \Delta t, \Delta t + 1, ..., T\}$ is the exercise date (for American option)
+- Optimization yields $\tilde{V}_X(t) = \oepratorname{sup}_{t \leq r \leq T} E^Q_t(\tilde{X}(r))$
+- Properties:
+    1.  Supermartingale 
+    2. $V(t is decreasing)$ in $E^Q$
+    V(t is decreasing) intuition difference: ???**not clear difference between conditional and unconditional in terms of valuation** 
+    3. $\tilde{V}_x (t) \geq \tilde{X} (t) \; \forall t $ 
+    4. $\tilde{V}_x (t) \geq \tilde{V}_E (t)$ where E stands for European option
+    5. $\tilde{V}_x$ is the smallest Q-supermartingale dominating $\tilde{X}$
+    6. The optimal exercise date $\hat{r}$ satisfies: 
+
+    $$ \hat{r} = \operatorname{inf}\{t \geq 0: \tilde{V}_X (t) = \tilde{X}(t) \} \text{ where X is the instantaneous payoff at t}
+    $$ 
+
+ 
+## Backward recursion comp of option value ## 
+
+$$
+\begin{aligned}
+\tilde{V}_X(t) &= \tilde{X}(t), \\
+t &= T - \Delta t, T - \Delta, ... , \Delta t \\ 
+\tilde{V}_x (t) = \operatorname{max} \{ \tilde{X} (t), E^Q_t [\tilde{V}_X (t + \Delta)] \}
+\end{aligned}
+$$
+
+From backward recursion: 
+
+$$  \tilde{V}_x (t) \begin{cases} E^Q_t (\tilde{V}_x (t + \Delta t)) > \tilde{X}(t) \quad \text{continuation region, implying that V is a Q-martingale} \\[1em]
+\tilde{X} (t) \geq E^Q_t(\tilde{V}_X (t + \Delta t) ) \quad \text{early exercise region, implying that V is a Q-supermartingale} \end{cases} 
+$$
+
+## Replicating the American option ## 
+
+- Portfolio-Consumption pair $\phi = (v, c)$ where $v$ is the self financing strategy, c is consumption; 
+- $v = (v_0, v_1) \quad X(t) = (K - S(t))^{+} \text{ put option in S}$
+- $V_v(t + \Delta t) = v_0 (t) B(t + \Delta) + v_1 (t) S(t + \Delta t)$ the intertemporal budget constraint of the self financing strategy. It can also be rewritten as: 
+$$ \Delta V_v (t) = v_0 (t) \Delta B(t) + v_1 (t) \Delta S (t)
+$$
+
+or, doscounting: 
+
+$$ \Delta \tilde{V}_v (t) = \Delta \tilde{S} (t) 
+$$
+
+Cumulative consumption: 
+$C(t) = \text{ consumption in }[0, t]$
+We restrict the strategy only to cash withdrawal: 
+
+$$ \Delta \tilde{C} (t) = \tilde{C} (t + \Delta t) - \tilde{C} (t) \geq 0 \; \forall t
+$$ 
+
+**Note**: $\tilde{C} (t) \text{ is } \mathcal{P}_t- \text{measurable}$
+
+The value of $\phi$ (portfolio) 
+
+$$ \begin{align} \tilde{V}_{\phi} (t) &= \tilde{V}_v (t) \\ 
+\Delta \tilde{V}_{\phi} (t) &= \tilde{V}_{\phi} (t + \Delta t) - \tilde{V}_{\phi} (t) \end{align}
+$$
+
+**Why not withdraw money?** clarify (not optimal to hold more than the necessary amount to replicate the option?)
+
+The goal of the writer is to find $\phi$ s.t. $\tilde{V}_{\phi} (t) \geq \tilde{X} (t) \quad \forall t  $
+
+Claim: $\tilde{V}_{\phi}$ is a Q-supermartingale, i.e. $ E^Q_t [ \Delta \tilde{V}_{\phi} (t)] \leq 0 $
+Indeed: we have $E^Q_t (\Delta \tilde{V}_{\phi} (t)) = E^Q_t [ \Delta \tilde{V}_v (t) - \Delta \tilde{C} (t)] = E^Q_t [\Delta \tilde{V}_v (t)] - E^Q_t [ \Delta \tilde{C} (t)] = - \Delta \tilde{C} (t) $  since the first term vanishes by the faxt that $\tilde{V}_v$ is Q martingale. 
+
+The optimal portfolio $\phi^{*}$ satisfies: 
+
+$$\tilde{V}_{\phi^*} (t) \geq \tilde{X} (t) \; \forall
+$$ 
+
+and we have $\tilde{V}_{\phi} = \tilde{V}_X$ (**clarify!!**)
+
+We have: 
+
+$$ \tilde{V}_{v^*} (t + \Delta t) = v^*_0 (t) + v^*_1 (t) \tilde{S} (t + \Delta t) - \Delta \tilde{C}^* (t) 
+$$  
+
+and 
+$$ \Delta \tilde{C}^{*}(t) = - E^Q_t [ \Delta \tilde{V}_{\phi^{*}} (t)] = - E^Q_t [ \Delta \tilde{V}_X (t) ] = \begin{cases}
+0, & \text{if \(V\) is in the continuation region}, \\[4pt]
+{}>0, & \text{if \(V\) is in the early-exercise region}.
+\end{cases}
+$$
+
+## European barrier option ## 
+
+- X final payoff at t
+- $S(0) < b$ is the barrier
+- S is the stock/index that triggers the barrier 
+
+The payoff is specified: 
+
+$$ X_{ko} (t)  = \begin{cases} 0 \text{ if triggered } \\ 
+X \text{ if not triggered} \end{cases}
+$$
+
+Or (knock in)
+
+$$ X_{ko} (t)  = \begin{cases} X \text{ if triggered } \\ 
+0 \text{ if not triggered} \end{cases}
+$$
+
+Define the running max of S :
+
+$$ \begin{align} M(t) &= max\{ S(u): u \leq t \} \text{ running max of S for } u \in (0,t) \\ 
+X_{KO} &= \begin{cases} 0 \text{ if } S \geq b \\ 
+X \text{ othereise} \end{cases} \\ 
+X &= X_{KI}(t) + X_{KO} (t) \\ 
+V(t) &= V_{KI} (t) + V_{KO} (t) \end{align}
+$$
+
+
+We can apply backward recursion to barrier options: 
+
+$$ \hat{V}_{KO} (t) = X \mathbf{1}(S(t) < b)
+$$
+
+Now, we want to prove that we can use the price instead of running maximum to derive the fair value of the option. 
+
+$$ 
+V_{KO} (0) = E^Q [X \mathbf{1}_{M(t) < b}] = \hat{V}_{KO}(0) 
+$$ 
+ 
+
+1. Split the indicator function for multiple periods: 
+
+$$ 
+\mathbf{1} (M(T) < b) = \prod_{i = 1}^T \mathbf{1} (S(t_i) < b) 
+$$ 
+
+2. Substitute 1. in the expectation: 
+
+$$ 
+V_{KO} (0) = E^Q [ X \mathbf{1} (M(2) < b)] = E^Q [ X \mathbf{1} (S(1) < b) \mathbf{1} (S(2) < b) ] = E^Q [ \mathbf{1} (S(1) < b) E^Q_1 [ X \mathbf{1} (S(2) < b)]]
+$$
+
+At each recursive node i in (0, T), we get $\hat{V}_{KO} (i)$ as the inner terms. What about knock in options? 
+
+$$ 
+V_{KI} (0) = V(0) - V_{KO} (0) = V(0) - \hat{V}_{KO} (0) 
+$$ 
+
+- In continuous time, the price may trigger the barrier several times. To avoid multiplicity, we can modify the barrier, raising or lowering it slightly. We derive the modified $\hat{b}$ **view modification paper** 
+
+## Path dependent options in binomial models ## 
+
+ Asian option: $A(t) = \frac{1}{M} \sum_i^M S(t_i)$ 
+ $X(t) = (K - A(t))^{+}$ 
+ Asian put option can be either European or American. 
+
+ Lookback call option: $M(t) = \operatorname{max}_{0 \leq t_i \leq t} S(t_i)$ 
+ $ X(t)  = (M(t) - K)^{+} $
+
+ If 
+  $$ 
+  \begin{align} X(t) = f(S(t)) \\ 
+  f: R^{+} \to R \text{ is deterministic} \\ 
+  f(x) = (x - k)^{+} \text{ call } f(x) = (k - x)^{+} \text{ put} \end{align}
+  $$ 
+
+  The pricing problem is Markovian, i.e. we solve for all t 
+
+  $$ 
+  V_X(t) = \operatorname{max} (f(S(t)), E^Q_t [V_X (t + \Delta t) e^{-n\Delta t}]) 
+  $$
+
+Given: 
+$$ \begin{align} 
+X(t) = (M(t) - K)^{+} \\ 
+\text{Markowianize by addimg an auxiliary state variable} (t, S(t), M(t)) \text{ for lookback} \\ 
+(t, S(t), A(t)) \text{ for Asian} 
+\end{align}
+$$ 
+
+## MArkowianization on lookback options ## 
+
+1. Define running max on $t_n$:
+
+$$ S(t_n) = S_0 u^k d^{t_n - k} \quad M(t_n, S(t_n)) = \begin{cases} S(t_n) \\ \vdots \\ S_0 u^k \end{cases} 
+$$
+
+
+## Continuos time ## 
+
+$\Delta t \to 0$
+ 
+ $$ 
+ \begin{align} \frac{B(t + \Delta t) - B(t)}{B(t)} = r(t) \Delta t \\ 
+ \Omega: \text{infinite scenarios} \\ 
+ \mathcal{P} \to \mathcal{F} \text{ filtration} \end{align}
+ $$
+
+Applying differential apprximation, we get 
+$$ \begin{align} \frac{d B(t)}{B(t)} &= r(t) dt \\ 
+d(ln B(t)) &= r(t) \\ 
+\int_0^T d(ln B(t)) &= \int_0^T r(t) dt
+B(T) = e^{\int_0^T r(t) dt}
+\end{align}
+$$ 
