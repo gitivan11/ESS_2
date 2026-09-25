@@ -23,7 +23,7 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -70,7 +70,42 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
 
+
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -147,7 +182,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./real_anal.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sets #</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sets</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -160,6 +195,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="./Stats_practice.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">f_X(x)</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Global_compl.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Global_compl.html</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -180,9 +221,46 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#lec.-1-income-statement-analysis" id="toc-lec.-1-income-statement-analysis" class="nav-link active" data-scroll-target="#lec.-1-income-statement-analysis"><span class="header-section-number">6</span> Lec. 1: income statement analysis</a>
   <ul class="collapse">
-  <li><a href="#equity-method" id="toc-equity-method" class="nav-link" data-scroll-target="#equity-method"><span class="header-section-number">6.1</span> Equity method</a></li>
-  <li><a href="#back-to-classification-of-activities" id="toc-back-to-classification-of-activities" class="nav-link" data-scroll-target="#back-to-classification-of-activities"><span class="header-section-number">6.2</span> Back to classification of activities</a></li>
-  <li><a href="#trend-analysis" id="toc-trend-analysis" class="nav-link" data-scroll-target="#trend-analysis"><span class="header-section-number">6.3</span> Trend analysis</a></li>
+  <li><a href="#types-of-analysis" id="toc-types-of-analysis" class="nav-link" data-scroll-target="#types-of-analysis"><span class="header-section-number">6.1</span> Types of analysis</a></li>
+  <li><a href="#types-of-investments-liquidity-vs-strategic" id="toc-types-of-investments-liquidity-vs-strategic" class="nav-link" data-scroll-target="#types-of-investments-liquidity-vs-strategic"><span class="header-section-number">6.2</span> Types of investments: liquidity vs strategic</a></li>
+  <li><a href="#equity-method" id="toc-equity-method" class="nav-link" data-scroll-target="#equity-method"><span class="header-section-number">6.3</span> Equity method</a></li>
+  <li><a href="#python-practice" id="toc-python-practice" class="nav-link" data-scroll-target="#python-practice"><span class="header-section-number">6.4</span> Python practice</a></li>
+  <li><a href="#types-of-variation-in-is" id="toc-types-of-variation-in-is" class="nav-link" data-scroll-target="#types-of-variation-in-is"><span class="header-section-number">6.5</span> 4 types of variation in IS</a></li>
+  <li><a href="#oci-items" id="toc-oci-items" class="nav-link" data-scroll-target="#oci-items"><span class="header-section-number">6.6</span> OCI items</a></li>
+  <li><a href="#trend-analysis" id="toc-trend-analysis" class="nav-link" data-scroll-target="#trend-analysis"><span class="header-section-number">6.7</span> Trend analysis</a></li>
+  </ul></li>
+  <li><a href="#lecture-2-focus-on-operating-income" id="toc-lecture-2-focus-on-operating-income" class="nav-link" data-scroll-target="#lecture-2-focus-on-operating-income"><span class="header-section-number">7</span> Lecture 2: focus on operating income</a>
+  <ul class="collapse">
+  <li><a href="#three-formats" id="toc-three-formats" class="nav-link" data-scroll-target="#three-formats"><span class="header-section-number">7.1</span> Three formats</a></li>
+  </ul></li>
+  <li><a href="#lecture-3" id="toc-lecture-3" class="nav-link" data-scroll-target="#lecture-3"><span class="header-section-number">8</span> Lecture 3</a>
+  <ul class="collapse">
+  <li><a href="#balance-sheet-format" id="toc-balance-sheet-format" class="nav-link" data-scroll-target="#balance-sheet-format"><span class="header-section-number">8.1</span> Balance sheet format</a></li>
+  <li><a href="#current-assetsliabilities" id="toc-current-assetsliabilities" class="nav-link" data-scroll-target="#current-assetsliabilities"><span class="header-section-number">8.2</span> Current assets/liabilities</a></li>
+  <li><a href="#cash-and-cash-equivalents" id="toc-cash-and-cash-equivalents" class="nav-link" data-scroll-target="#cash-and-cash-equivalents"><span class="header-section-number">8.3</span> Cash and Cash equivalents</a></li>
+  <li><a href="#ways-to-analyze-th-debts" id="toc-ways-to-analyze-th-debts" class="nav-link" data-scroll-target="#ways-to-analyze-th-debts"><span class="header-section-number">8.4</span> Ways to analyze th debts</a></li>
+  <li><a href="#current-operating-liabilities" id="toc-current-operating-liabilities" class="nav-link" data-scroll-target="#current-operating-liabilities"><span class="header-section-number">8.5</span> Current operating liabilities</a></li>
+  <li><a href="#example-dell-technologies" id="toc-example-dell-technologies" class="nav-link" data-scroll-target="#example-dell-technologies"><span class="header-section-number">8.6</span> Example: dell technologies</a></li>
+  <li><a href="#tax-assets-and-liabilities" id="toc-tax-assets-and-liabilities" class="nav-link" data-scroll-target="#tax-assets-and-liabilities"><span class="header-section-number">8.7</span> Tax assets and liabilities</a></li>
+  <li><a href="#helf-for-sale-assetsliabilities" id="toc-helf-for-sale-assetsliabilities" class="nav-link" data-scroll-target="#helf-for-sale-assetsliabilities"><span class="header-section-number">8.8</span> Helf for sale assets/liabilities</a></li>
+  <li><a href="#summary-of-importan-metrics-from-managerial-format" id="toc-summary-of-importan-metrics-from-managerial-format" class="nav-link" data-scroll-target="#summary-of-importan-metrics-from-managerial-format"><span class="header-section-number">8.9</span> Summary of importan metrics from managerial format</a></li>
+  <li><a href="#minorities-interests" id="toc-minorities-interests" class="nav-link" data-scroll-target="#minorities-interests"><span class="header-section-number">8.10</span> Minorities interests</a></li>
+  <li><a href="#goodwill-and-intangibles" id="toc-goodwill-and-intangibles" class="nav-link" data-scroll-target="#goodwill-and-intangibles"><span class="header-section-number">8.11</span> Goodwill and intangibles</a></li>
+  </ul></li>
+  <li><a href="#lecture-6-dupont-formula" id="toc-lecture-6-dupont-formula" class="nav-link" data-scroll-target="#lecture-6-dupont-formula"><span class="header-section-number">9</span> lecture 6: DuPont formula</a>
+  <ul class="collapse">
+  <li><a href="#roe-decomposition-modigliani-miller" id="toc-roe-decomposition-modigliani-miller" class="nav-link" data-scroll-target="#roe-decomposition-modigliani-miller"><span class="header-section-number">9.1</span> ROE decomposition: Modigliani-Miller</a></li>
+  <li><a href="#operating-liability-leverage" id="toc-operating-liability-leverage" class="nav-link" data-scroll-target="#operating-liability-leverage"><span class="header-section-number">9.2</span> Operating liability leverage</a></li>
+  <li><a href="#changes-in-net-equity-and-effects-on-roe" id="toc-changes-in-net-equity-and-effects-on-roe" class="nav-link" data-scroll-target="#changes-in-net-equity-and-effects-on-roe"><span class="header-section-number">9.3</span> Changes in net equity and effects on ROE</a></li>
+  </ul></li>
+  <li><a href="#lecture-7-cash-flow-statement" id="toc-lecture-7-cash-flow-statement" class="nav-link" data-scroll-target="#lecture-7-cash-flow-statement"><span class="header-section-number">10</span> Lecture 7: Cash flow statement</a>
+  <ul class="collapse">
+  <li><a href="#income-statement" id="toc-income-statement" class="nav-link" data-scroll-target="#income-statement"><span class="header-section-number">10.1</span> Income statement</a></li>
+  <li><a href="#bs" id="toc-bs" class="nav-link" data-scroll-target="#bs"><span class="header-section-number">10.2</span> BS</a></li>
+  <li><a href="#pipiline-of-indirect-method" id="toc-pipiline-of-indirect-method" class="nav-link" data-scroll-target="#pipiline-of-indirect-method"><span class="header-section-number">10.3</span> Pipiline of indirect method</a></li>
+  <li><a href="#cfoa-operating-activities" id="toc-cfoa-operating-activities" class="nav-link" data-scroll-target="#cfoa-operating-activities"><span class="header-section-number">10.4</span> CFOA (operating activities)</a></li>
+  <li><a href="#breaking-down-change-in-ppe" id="toc-breaking-down-change-in-ppe" class="nav-link" data-scroll-target="#breaking-down-change-in-ppe"><span class="header-section-number">10.5</span> Breaking down change in PPE</a></li>
+  <li><a href="#financial-changes" id="toc-financial-changes" class="nav-link" data-scroll-target="#financial-changes"><span class="header-section-number">10.6</span> Financial changes</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -221,22 +299,42 @@ ul.task-list li input[type="checkbox"] {
 <li>Strategic: loans + equity interest in other companies.</li>
 <li>Investment in subsidiaries - operating investments?</li>
 <li>In fin statements: subsidiaries fully consolidated, associates -&gt; equity method, joint arrangements (joint operator and joint venturer - <strong>clarify these terms</strong>)</li>
-<li><strong>Associate vs subsidiary</strong> - explain difference</li>
-<li><strong>What if we consolidate associates intead of using equity method?</strong> - <em>equity method - clarify</em></li>
+<li><strong>Associate vs subsidiary</strong> - explain difference. <strong>ANSWER</strong>: associate - significant influence but no control, subsidiary - control.</li>
+<li><strong>What if we consolidate associates intead of using equity method?</strong> - <em>equity method - clarify</em>.</li>
 </ul>
-<section id="equity-method" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="equity-method"><span class="header-section-number">6.1</span> Equity method</h2>
+<p><strong>Clarification</strong>: Equity requires recording only net assets of the joint company in the balance sheet, as opposed to assets and liabailities.</p>
+<section id="types-of-analysis" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="types-of-analysis"><span class="header-section-number">6.1</span> Types of analysis</h2>
 <ul>
-<li>using equity over consildation affects (positively) ratios (debt to equity lower. ROA + ROS higher)</li>
+<li>Competitor</li>
+<li>Credit analysis - repay on time</li>
+<li>Equity analysis - cash flows, growth, risk</li>
+<li>Audit and fraud analysis</li>
 </ul>
 </section>
-<section id="back-to-classification-of-activities" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="back-to-classification-of-activities"><span class="header-section-number">6.2</span> Back to classification of activities</h2>
+<section id="types-of-investments-liquidity-vs-strategic" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="types-of-investments-liquidity-vs-strategic"><span class="header-section-number">6.2</span> Types of investments: liquidity vs strategic</h2>
 <ul>
-<li>Non core operating activities - ancillary to the core operating activities, ex.: merchandising/fundraising, gains from disposal of players for a football company, royalties for manufacturing company</li>
-<li>Example in sheet (<strong>not clear</strong>)</li>
-<li>Unusual items - non-recurrent items (non underlying, i.e.) - diclosed separately in icnome statements.</li>
+<li>Liquidity: bonds, stocks</li>
+<li>Strategic: loans + equity interest in other companies.</li>
+<li>Investment in subsidiaries - operating investments?</li>
+<li>In fin statements: subsidiaries fully consolidated, associates -&gt; equity method, joint arrangements (joint operator and joint venturer - <strong>clarify these terms</strong>)</li>
+<li><strong>Associate vs subsidiary</strong> - explain difference. <strong>ANSWER</strong>: associate - significant influence but no control, subsidiary - control.</li>
+<li><strong>What if we consolidate associates intead of using equity method?</strong> - <em>equity method - clarify</em>.</li>
 </ul>
+<p><strong>Clarification</strong>: Equity requires recording only net assets of the joint company in the balance sheet, as opposed to assets and liabailities. Also applies to majority interests.</p>
+</section>
+<section id="equity-method" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="equity-method"><span class="header-section-number">6.3</span> Equity method</h2>
+<ul>
+<li><p>using equity over consildation affects (positively) ratios (debt to equity lower. ROA + ROS higher)</p></li>
+<li><p>IFRS 8: ## Back to classification of activities ##</p></li>
+<li><p>Non core operating activities - ancillary to the core operating activities, ex.: merchandising/fundraising, gains from disposal of players for a football company, royalties for manufacturing company</p></li>
+<li><p><strong>Two types</strong>: ancillary vs financial and investment prop</p></li>
+<li><p>Unusual items - non-recurrent items (non underlying, i.e.) - diclosed separately in icnome statements.</p></li>
+</ul>
+<p><strong>Rationale</strong>:</p>
+<p>separate unusual from continuos operations</p>
 <p><strong>Definition</strong>:</p>
 <ul>
 <li>violate mathcing principle (when income or expense rtelated to events in past years)</li>
@@ -246,14 +344,269 @@ ul.task-list li input[type="checkbox"] {
 <li>Used when differing valuation affects balance sheet but not reflected in net income (<strong>ex: revaluation</strong>) - but not in all cases (ex: accounting for financial derivatives)</li>
 </ul>
 </section>
-<section id="trend-analysis" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="trend-analysis"><span class="header-section-number">6.3</span> Trend analysis</h2>
+<section id="python-practice" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="python-practice"><span class="header-section-number">6.4</span> Python practice</h2>
+</section>
+<section id="types-of-variation-in-is" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="types-of-variation-in-is"><span class="header-section-number">6.5</span> 4 types of variation in IS</h2>
+<ul>
+<li>recurring vs non recurring (normal)</li>
+<li>discretion and possible red flags (fraud)</li>
+</ul>
+</section>
+<section id="oci-items" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="oci-items"><span class="header-section-number">6.6</span> OCI items</h2>
+<ul>
+<li>revalaution surplus changes</li>
+<li>remeasurements of benefit plans</li>
+<li>translations (currency differences)</li>
+<li>fair value remeasurement changes</li>
+<li>gains and losses on hedging instruments</li>
+</ul>
+</section>
+<section id="trend-analysis" class="level2" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="trend-analysis"><span class="header-section-number">6.7</span> Trend analysis</h2>
 <ul>
 <li>recurring vs non recurring</li>
 <li>discretionary</li>
 <li>anomalous (red flags)</li>
 </ul>
-<p><strong>techniques</strong> - bridge analysis (explain) - stacked bar</p>
+<p><strong>techniques</strong> - bridge analysis: - stacked bar chart - CAGR</p>
+</section>
+</section>
+<section id="lecture-2-focus-on-operating-income" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Lecture 2: focus on operating income</h1>
+<section id="three-formats" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="three-formats"><span class="header-section-number">7.1</span> Three formats</h2>
+<p>Gross profit/added value vs contribution margin (net revenues - variable costs)</p>
+<p>::: {#b5598cb6 .cell execution_count=1} <code>{.python .cell-code}  import pandas as pd  table = pd.DataFrame({     "Gross Profit": ["nature of expenses, does not include R&amp;D"],      "Value Added": ["only internal costs"],     "Contribution margin": ["Minus variable cost"]  })  table</code></p>
+::: {.cell-output .cell-output-display execution_count=1} ```{=html}
+<div>
+
+<table class="dataframe table table-sm table-striped small">
+<thead>
+<tr>
+<th>
+</th>
+<th>
+Gross Profit
+</th>
+<th>
+Value Added
+</th>
+<th>
+Contribution margin
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+0
+</th>
+<td>
+nature of expenses, does not include R&amp;D
+</td>
+<td>
+only internal costs
+</td>
+<td>
+Minus variable cost
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>``` ::: :::</p>
+</section>
+</section>
+<section id="lecture-3" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Lecture 3</h1>
+<div id="tbl-ratios" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[28, 34, 38]">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-ratios-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;8.1
+</figcaption>
+<div aria-describedby="tbl-ratios-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="line-block">Ratio | Meaning | Calculation |<br>
+: — | : — | : — |<br>
+Gross profit margin | manufacturing efficiency | Gross profit / Net revenue |</div>
+</div>
+</figure>
+</div>
+<section id="balance-sheet-format" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="balance-sheet-format"><span class="header-section-number">8.1</span> Balance sheet format</h2>
+<ul>
+<li>Managerial vs liquidity</li>
+<li>Liquidity = fewer than vs longer than 12 months</li>
+<li>Managerial - operating vs non operating activities</li>
+</ul>
+</section>
+<section id="current-assetsliabilities" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="current-assetsliabilities"><span class="header-section-number">8.2</span> Current assets/liabilities</h2>
+<ul>
+<li>accoridng to IAS3, not only overlap with short term (liquidity) OR current (operating) (managerial) - <strong>hybrid definition</strong>, based on time but also length of business cycle</li>
+<li>The definition relies on <strong>realizing within business cycle</strong> or 12 montths after reporting (thats the only overlap)</li>
+<li>professional analaysts use managerial = better!</li>
+<li>Investment properties classified as non current operating assets.</li>
+</ul>
+</section>
+<section id="cash-and-cash-equivalents" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="cash-and-cash-equivalents"><span class="header-section-number">8.3</span> Cash and Cash equivalents</h2>
+<ul>
+<li>classified as non operating</li>
+</ul>
+</section>
+<section id="ways-to-analyze-th-debts" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="ways-to-analyze-th-debts"><span class="header-section-number">8.4</span> Ways to analyze th debts</h2>
+<ul>
+<li><strong>net debts</strong> (difference iin total debts/assets), used for modigliani miller (view decomp)</li>
+<li><strong>net financial position</strong> (total debt - cash - short term fin assets) minus net short term financial debts (used as upper bound on to ebitda ratios, also to define cost of debt <span class="math inline">\(K_d\)</span>)</li>
+<li><strong>net short term fin debt</strong> (short term debt less cash less short term fin assets) , used for assessing the short term perspective</li>
+</ul>
+</section>
+<section id="current-operating-liabilities" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="current-operating-liabilities"><span class="header-section-number">8.5</span> Current operating liabilities</h2>
+<ul>
+<li>Why current? not time, but normal and recurrent operating cycle - if the liability is recurrent, can be short term or long term! <strong>current = recurrent</strong></li>
+</ul>
+</section>
+<section id="example-dell-technologies" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="example-dell-technologies"><span class="header-section-number">8.6</span> Example: dell technologies</h2>
+<ul>
+<li>long term investments are current assets also<br>
+</li>
+<li>NOWC/Revenues tends to be stable because tied to sales.</li>
+</ul>
+</section>
+<section id="tax-assets-and-liabilities" class="level2" data-number="8.7">
+<h2 data-number="8.7" class="anchored" data-anchor-id="tax-assets-and-liabilities"><span class="header-section-number">8.7</span> Tax assets and liabilities</h2>
+<ul>
+<li>include total tax position as a separate liabilities category</li>
+<li>classify tax assets to current operating assets, tax liabilities into operating liabilities category</li>
+</ul>
+</section>
+<section id="helf-for-sale-assetsliabilities" class="level2" data-number="8.8">
+<h2 data-number="8.8" class="anchored" data-anchor-id="helf-for-sale-assetsliabilities"><span class="header-section-number">8.8</span> Helf for sale assets/liabilities</h2>
+<ul>
+<li>best way: put in non operating so doesnt affect net operating assets (dont confuse with held for sale!)</li>
+</ul>
+</section>
+<section id="summary-of-importan-metrics-from-managerial-format" class="level2" data-number="8.9">
+<h2 data-number="8.9" class="anchored" data-anchor-id="summary-of-importan-metrics-from-managerial-format"><span class="header-section-number">8.9</span> Summary of importan metrics from managerial format</h2>
+<ul>
+<li><p>NOWC</p></li>
+<li><p>gross and net invested capital</p></li>
+<li><p>gross and net operateing invested capital</p></li>
+<li><p><strong>Clarify</strong>!!</p></li>
+<li><p>debt to equity</p></li>
+<li><p>financial debt to equity - only financial</p></li>
+<li><p>debt to assets</p></li>
+<li><p>NFP to equity</p></li>
+<li><p>NFO to equity</p></li>
+</ul>
+</section>
+<section id="minorities-interests" class="level2" data-number="8.10">
+<h2 data-number="8.10" class="anchored" data-anchor-id="minorities-interests"><span class="header-section-number">8.10</span> Minorities interests</h2>
+<ul>
+<li>FD/ NE of parent is <strong>fin leverage</strong>, NE/NE_parent is the <strong>shareholding leverage</strong></li>
+</ul>
+</section>
+<section id="goodwill-and-intangibles" class="level2" data-number="8.11">
+<h2 data-number="8.11" class="anchored" data-anchor-id="goodwill-and-intangibles"><span class="header-section-number">8.11</span> Goodwill and intangibles</h2>
+<ul>
+<li>mismatch between impairment vs amortization cost - if no impairment, amount of intangibles is not adjusted and a relevant portion of assets is frozen.</li>
+<li>adjust: adjusted total assets (remove goodwill), adjusted net equity (net equity - goodwill)</li>
+<li>ratios like Assets/equity, net income/quity. net income/total assets all increase due to denominator decline.</li>
+</ul>
+</section>
+</section>
+<section id="lecture-6-dupont-formula" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> lecture 6: DuPont formula</h1>
+<section id="roe-decomposition-modigliani-miller" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="roe-decomposition-modigliani-miller"><span class="header-section-number">9.1</span> ROE decomposition: Modigliani-Miller</h2>
+<p><span class="math display">\[
+\mathrm{ROE}
+=
+\frac{\text{Comprehensive Income}}{\text{Net Equity}}
+=
+\frac{\text{Operating Income}}{\text{Invested Capital}}
++
+\left(
+\frac{\text{Operating Income}}{\text{Invested Capital}}
+-
+\frac{\text{Financial Expenses}}{\text{Total Liabilities}}
+\right)
+\times
+\frac{\text{Total Liabilities}}{\text{Net Equity}}
+\times
+\frac{\text{Comprehensive Income}}
+{\text{Income before Unusual Items and Taxes}}
+\]</span></p>
+<ul>
+<li>Comment: the difference in operating profitability and expenses defines whether the company is profitable (ROE positive)</li>
+<li>Second technical adjustment: we substract total liabilities from total assets to arrive at net results (“clean” from financial income streams).</li>
+</ul>
+</section>
+<section id="operating-liability-leverage" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="operating-liability-leverage"><span class="header-section-number">9.2</span> Operating liability leverage</h2>
+<ul>
+<li>Prof Penman proposal: use NOPAT (ne operating profit after tax) instead of operating income</li>
+<li>Decompose NOPAT/Net operating invested capital into NOPAT over gross operating invested capital and diff between nopat ratio and short term borrowing.</li>
+<li>Operative liability x Short term interest rates are the implicit cost, which are then added to NOPAT</li>
+<li>Interest rate: either market or short term interest expenses/st fin liabilities</li>
+<li><strong>Modigliani-Miller, ROE decomposition</strong> (explain)</li>
+<li><strong>special cases</strong>: fin assets exceed fin liabilities, net operating invested capital negative (net operating liabilities exceed net assets)</li>
+</ul>
+</section>
+<section id="changes-in-net-equity-and-effects-on-roe" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="changes-in-net-equity-and-effects-on-roe"><span class="header-section-number">9.3</span> Changes in net equity and effects on ROE</h2>
+<p>Changes of net equity depend: - on economic performance: net income vs OCI - shareholder transactions (buybacks, new insuance) - acquisitions, changes in ownership with no loss of control, loss of control.</p>
+<p><strong>what of extreme cases</strong>?</p>
+<ul>
+<li>if net operating assets negative: use gross operating assets instead! Does not maket sense to use net operating assets in decomposition since multiplied by short term interest rate, adds value!</li>
+<li><strong>DCF vs EVA</strong>:</li>
+<li>From final example: use financial expenses instead on net expenses to arrive to a “good” number</li>
+</ul>
+</section>
+</section>
+<section id="lecture-7-cash-flow-statement" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Lecture 7: Cash flow statement</h1>
+<section id="income-statement" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="income-statement"><span class="header-section-number">10.1</span> Income statement</h2>
+</section>
+<section id="bs" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="bs"><span class="header-section-number">10.2</span> BS</h2>
+</section>
+<section id="pipiline-of-indirect-method" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="pipiline-of-indirect-method"><span class="header-section-number">10.3</span> Pipiline of indirect method</h2>
+<ol type="1">
+<li>Add net income</li>
+<li>Adjust for non monetary (reval, D&amp;A, impairment)</li>
+<li>Adjust for classification between investing, financing, operating ??</li>
+<li>adjust non cash operations</li>
+</ol>
+</section>
+<section id="cfoa-operating-activities" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="cfoa-operating-activities"><span class="header-section-number">10.4</span> CFOA (operating activities)</h2>
+<p>net income + 8800 <strong>first adjustment</strong>: non monetary revenues/expenses D &amp; A + 12000 Impairment + 4000 Revaluation of financial assets -3000</p>
+<p>Gains on disposals (adjustment based on activity) -3000 <strong>summary</strong>”” “Monetary income” - the operations affecting cash flows directly and immediately</p>
+<p>Non monetary then: - change in AR/AP, - tax items - etc.</p>
+</section>
+<section id="breaking-down-change-in-ppe" class="level2" data-number="10.5">
+<h2 data-number="10.5" class="anchored" data-anchor-id="breaking-down-change-in-ppe"><span class="header-section-number">10.5</span> Breaking down change in PPE</h2>
+<ul>
+<li>Gross change (excl depr) = 25 000</li>
+<li>note 1: contribution from shareholders + 10000</li>
+<li>note 6: purchase + 25 000 (5000 through leases, 20000 through supplier purchases)</li>
+<li>note 7: sales - 60000</li>
+</ul>
+</section>
+<section id="financial-changes" class="level2" data-number="10.6">
+<h2 data-number="10.6" class="anchored" data-anchor-id="financial-changes"><span class="header-section-number">10.6</span> Financial changes</h2>
+<ul>
+<li>LT fin loans consist of new loans and reclassification to short term portion -18000</li>
+</ul>
 
 
 </section>
@@ -667,8 +1020,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./real_anal.html" class="pagination-link" aria-label="Sets #">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sets #</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./real_anal.html" class="pagination-link" aria-label="Sets">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sets</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

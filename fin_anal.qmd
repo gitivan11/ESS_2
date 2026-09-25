@@ -64,23 +64,6 @@ Statement of income -> net income -> othe comprehensive income
 - Used when differing valuation affects balance sheet but not reflected in net income (**ex: revaluation**) - but not in all cases (ex: accounting for financial derivatives)
 
 
-## Python practice ## 
-
-```{python}
-#| echo: false 
-#| warning: false
-
-import pandas as pd 
-
-
-df = pd.DataFrame(
-     {
-        "2000": [100789, 98836, 1953, None, 87, 146, 121, 212, -37, 2482],
-        "1999": [40112, 39310, 802, None, 309, 541, 0, 162, 181, 1995],
-        "1998": [31260, 29882, 1378, None, 97, 56, 0, 88, -37, 1582],
-    }, 
-``` 
-
 ## 4 types of variation in IS ## 
 
 - recurring vs non recurring (normal)
@@ -110,10 +93,26 @@ df = pd.DataFrame(
 ## Three formats ## 
 
 Gross profit/added value vs contribution margin (net revenues - variable costs)
+ 
+ ```{python}
+ import pandas as pd
+ table = pd.DataFrame({
+    "Gross Profit": ["nature of expenses, does not include R&D"], 
+    "Value Added": ["only internal costs"],
+    "Contribution margin": ["Minus variable cost"]
+ })
+ table
+ ```
 
 
 
 # Lecture 3 #
+
+::: {#tbl-ratios tbl-colwidths="[28, 34, 38]"}
+| Ratio | Meaning | Calculation |
+| :--- | :--- | :--- |
+| Gross profit margin | manufacturing efficiency | Gross profit / Net revenue |
+:::
 
 
 ## Balance sheet format ##
@@ -227,4 +226,56 @@ Changes of net equity depend:
 - if net operating assets negative: use gross operating assets instead! Does not maket sense to use net operating assets in decomposition since multiplied by short term interest rate, adds value! 
 - **DCF vs EVA**: 
 - From final example: use financial expenses instead on net expenses to arrive to a "good" number
+
+# Lecture 7: Cash flow statement # 
+
+## Income statement ## 
+
+## BS ## 
+
+## Pipiline of indirect method ## 
+
+1. Add net income 
+2. Adjust for non monetary (reval, D&A, impairment)
+3. Adjust for classification between investing, financing, operating ?? 
+4. adjust non cash operations 
+
+## CFOA (operating activities) ## 
+
+net income + 8800 
+**first adjustment**: non monetary revenues/expenses
+D & A + 12000 
+Impairment + 4000 
+Revaluation of financial assets -3000 
+
+Gains on disposals (adjustment based on activity) -3000
+**summary**""
+"Monetary income" - the operations affecting cash flows directly and immediately
+
+Non monetary then: 
+- change in AR/AP, 
+- tax items
+- etc.
+
+## Breaking down change in PPE ## 
+
+- Gross change (excl depr) = 25 000 
+- note 1: contribution from shareholders + 10000
+- note 6: purchase + 25 000 (5000 through leases, 20000 through supplier purchases)
+- note 7: sales - 60000
+
+## Financial changes ## 
+- LT fin loans consist of new loans and reclassification to short term portion -18000
+
+
+
+
+
+
+
+
+
+
+
+
 

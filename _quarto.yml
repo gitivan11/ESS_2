@@ -1,6 +1,9 @@
 project:
   type: book
 
+execute:
+  python: "C:/Users/Ivan/Desktop/Study/SECOND YEAR ESS/ESS_2/.venv/Scripts/python.exe"
+
 book:
   title: "ESS_2"
   author: "gitivan"

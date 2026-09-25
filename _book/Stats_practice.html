@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./thesis_remarks.html" rel="next">
+<link href="./Global_compl.html" rel="next">
 <link href="./intro_stat_learning.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -152,7 +152,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./comp_finance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">comp_finance.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Lect 1 #</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -170,13 +170,13 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./fin_anal.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">fin_anal.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Intro ##</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./real_anal.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">real_anal.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Sets</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -193,8 +193,8 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./thesis_remarks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">thesis_remarks.html</span></span></a>
+  <a href="./Global_compl.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Global_compl.html</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -217,6 +217,7 @@ window.Quarto = {
   <li><a href="#b-find-mle-hattheta" id="toc-b-find-mle-hattheta" class="nav-link" data-scroll-target="#b-find-mle-hattheta"><span class="header-section-number">8.2</span> (b) Find MLE <span class="math inline">\(\hat{\theta}\)</span></a></li>
   <li><a href="#c-is-hattheta-unbiased-mse" id="toc-c-is-hattheta-unbiased-mse" class="nav-link" data-scroll-target="#c-is-hattheta-unbiased-mse"><span class="header-section-number">8.3</span> (c) Is <span class="math inline">\(\hat{\theta}\)</span> unbiased? + MSE</a></li>
   <li><a href="#d-obtain-asymptotic-interval-for-x_m" id="toc-d-obtain-asymptotic-interval-for-x_m" class="nav-link" data-scroll-target="#d-obtain-asymptotic-interval-for-x_m"><span class="header-section-number">8.4</span> (d) obtain asymptotic interval for <span class="math inline">\(x_m\)</span></a></li>
+  <li><a href="#practice-the-graph" id="toc-practice-the-graph" class="nav-link" data-scroll-target="#practice-the-graph"><span class="header-section-number">8.5</span> Practice the graph</a></li>
   </ul>
 </nav>
     </div>
@@ -381,9 +382,21 @@ C
 \text{ (3) By Delta method, } \tilde{\theta} = g(\hat{\theta}) \sim \mathcal{N}(g(\theta), \frac{(g'(\theta))^2}{I_{\underline{X}}(\theta)}) \text{ where } (g'(\theta ))^2 = (2^{1 + \frac{1}{\theta}} \ln 2 (-1) \frac{1}{\theta^2})^2 = 2^{2(1 + \frac{1}{\theta})} (\ln 2)^2 \frac{1}{\theta^4}\\[0.5em]
 \text{ (4) now obtain Fischer for the sample}&amp;
 I_{\underline{X}}(\theta) = - \mathbb{E}(\frac{\partial^2 \ell }{\partial {\theta}^2}) = \frac{n}{\theta^2}\\[0.5em]
-\text{ (5) now calculate the asympt variance}&amp; \mathrm{Avar}(\tilde{\theta}) = 2^{2(1 + \frac{1}{\theta})} (\ln 2)^2 \frac{1}{n \theta^2} \implies x_m \in \tilde{\theta} \pm z_\alpha \frac{2^{1 + \frac{1}{\theta}} (\ln 2)^2}{\theta \sqrt{n}}
+\text{ (5) now calculate the asympt variance}&amp; \mathrm{Avar}(\tilde{\theta}) = 2^{2(1 + \frac{1}{\theta})} (\ln 2)^2 \frac{1}{n \theta^2} \implies x_m \in \tilde{\theta} \pm z_{\alpha/2} \frac{2^{1 + \frac{1}{\hat{\theta}} \ln 2}}{\hat{\theta} \sqrt{n}}
 \end{array}
 \]</span></p>
+</section>
+<section id="practice-the-graph" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="practice-the-graph"><span class="header-section-number">8.5</span> Practice the graph</h2>
+<div id="14c012f0" class="cell" data-fig-height="4" data-fig-width="8" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Stats_practice_files/figure-html/cell-2-output-1.png" class="quarto-figure quarto-figure-center figure-img" width="687" height="356"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
 </section>
@@ -796,8 +809,8 @@ I_{\underline{X}}(\theta) = - \mathbb{E}(\frac{\partial^2 \ell }{\partial {\thet
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./thesis_remarks.html" class="pagination-link" aria-label="thesis_remarks.html">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">thesis_remarks.html</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Global_compl.html" class="pagination-link" aria-label="Global_compl.html">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Global_compl.html</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

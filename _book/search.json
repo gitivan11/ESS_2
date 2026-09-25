@@ -1,5 +1,305 @@
 [
   {
+    "objectID": "fin_anal.html",
+    "href": "fin_anal.html",
+    "title": "5  Intro ##",
+    "section": "",
+    "text": "6 Lec. 1: income statement analysis\nTypes of investments: liquidity vs strategic\nClarification: Equity requires recording only net assets of the joint company in the balance sheet, as opposed to assets and liabailities.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#types-of-analysis",
+    "href": "fin_anal.html#types-of-analysis",
+    "title": "5  Intro ##",
+    "section": "6.1 Types of analysis",
+    "text": "6.1 Types of analysis\n\nCompetitor\nCredit analysis - repay on time\nEquity analysis - cash flows, growth, risk\nAudit and fraud analysis",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#types-of-investments-liquidity-vs-strategic",
+    "href": "fin_anal.html#types-of-investments-liquidity-vs-strategic",
+    "title": "5  Intro ##",
+    "section": "6.2 Types of investments: liquidity vs strategic",
+    "text": "6.2 Types of investments: liquidity vs strategic\n\nLiquidity: bonds, stocks\nStrategic: loans + equity interest in other companies.\nInvestment in subsidiaries - operating investments?\nIn fin statements: subsidiaries fully consolidated, associates -&gt; equity method, joint arrangements (joint operator and joint venturer - clarify these terms)\nAssociate vs subsidiary - explain difference. ANSWER: associate - significant influence but no control, subsidiary - control.\nWhat if we consolidate associates intead of using equity method? - equity method - clarify.\n\nClarification: Equity requires recording only net assets of the joint company in the balance sheet, as opposed to assets and liabailities. Also applies to majority interests.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#equity-method",
+    "href": "fin_anal.html#equity-method",
+    "title": "5  Intro ##",
+    "section": "6.3 Equity method",
+    "text": "6.3 Equity method\n\nusing equity over consildation affects (positively) ratios (debt to equity lower. ROA + ROS higher)\nIFRS 8: ## Back to classification of activities ##\nNon core operating activities - ancillary to the core operating activities, ex.: merchandising/fundraising, gains from disposal of players for a football company, royalties for manufacturing company\nTwo types: ancillary vs financial and investment prop\nUnusual items - non-recurrent items (non underlying, i.e.) - diclosed separately in icnome statements.\n\nRationale:\nseparate unusual from continuos operations\nDefinition:\n\nviolate mathcing principle (when income or expense rtelated to events in past years)\nunusual in nature (not common for industry/business)\ninfrequent events (ex.: accident, disposal of businessetc.)\ndepends on the context of the industry! for instance if litigation is common, neither unusual nor infrequent. -OCI items (revaluation from fair value adjustment, complex estimates etc.) Statement of income -&gt; net income -&gt; othe comprehensive income\nUsed when differing valuation affects balance sheet but not reflected in net income (ex: revaluation) - but not in all cases (ex: accounting for financial derivatives)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#python-practice",
+    "href": "fin_anal.html#python-practice",
+    "title": "5  Intro ##",
+    "section": "6.4 Python practice",
+    "text": "6.4 Python practice",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#types-of-variation-in-is",
+    "href": "fin_anal.html#types-of-variation-in-is",
+    "title": "5  Intro ##",
+    "section": "6.5 4 types of variation in IS",
+    "text": "6.5 4 types of variation in IS\n\nrecurring vs non recurring (normal)\ndiscretion and possible red flags (fraud)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#oci-items",
+    "href": "fin_anal.html#oci-items",
+    "title": "5  Intro ##",
+    "section": "6.6 OCI items",
+    "text": "6.6 OCI items\n\nrevalaution surplus changes\nremeasurements of benefit plans\ntranslations (currency differences)\nfair value remeasurement changes\ngains and losses on hedging instruments",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#trend-analysis",
+    "href": "fin_anal.html#trend-analysis",
+    "title": "5  Intro ##",
+    "section": "6.7 Trend analysis",
+    "text": "6.7 Trend analysis\n\nrecurring vs non recurring\ndiscretionary\nanomalous (red flags)\n\ntechniques - bridge analysis: - stacked bar chart - CAGR",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#three-formats",
+    "href": "fin_anal.html#three-formats",
+    "title": "5  Intro ##",
+    "section": "7.1 Three formats",
+    "text": "7.1 Three formats\nGross profit/added value vs contribution margin (net revenues - variable costs)\n::: {#b5598cb6 .cell execution_count=1} {.python .cell-code}  import pandas as pd  table = pd.DataFrame({     \"Gross Profit\": [\"nature of expenses, does not include R&D\"],      \"Value Added\": [\"only internal costs\"],     \"Contribution margin\": [\"Minus variable cost\"]  })  table\n::: {.cell-output .cell-output-display execution_count=1} ```{=html}\n\n\n\n\n\n\n\n\nGross Profit\n\n\nValue Added\n\n\nContribution margin\n\n\n\n\n\n\n0\n\n\nnature of expenses, does not include R&D\n\n\nonly internal costs\n\n\nMinus variable cost\n\n\n\n\n\n``` ::: :::",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#balance-sheet-format",
+    "href": "fin_anal.html#balance-sheet-format",
+    "title": "5  Intro ##",
+    "section": "8.1 Balance sheet format",
+    "text": "8.1 Balance sheet format\n\nManagerial vs liquidity\nLiquidity = fewer than vs longer than 12 months\nManagerial - operating vs non operating activities",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#current-assetsliabilities",
+    "href": "fin_anal.html#current-assetsliabilities",
+    "title": "5  Intro ##",
+    "section": "8.2 Current assets/liabilities",
+    "text": "8.2 Current assets/liabilities\n\naccoridng to IAS3, not only overlap with short term (liquidity) OR current (operating) (managerial) - hybrid definition, based on time but also length of business cycle\nThe definition relies on realizing within business cycle or 12 montths after reporting (thats the only overlap)\nprofessional analaysts use managerial = better!\nInvestment properties classified as non current operating assets.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#cash-and-cash-equivalents",
+    "href": "fin_anal.html#cash-and-cash-equivalents",
+    "title": "5  Intro ##",
+    "section": "8.3 Cash and Cash equivalents",
+    "text": "8.3 Cash and Cash equivalents\n\nclassified as non operating",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#ways-to-analyze-th-debts",
+    "href": "fin_anal.html#ways-to-analyze-th-debts",
+    "title": "5  Intro ##",
+    "section": "8.4 Ways to analyze th debts",
+    "text": "8.4 Ways to analyze th debts\n\nnet debts (difference iin total debts/assets), used for modigliani miller (view decomp)\nnet financial position (total debt - cash - short term fin assets) minus net short term financial debts (used as upper bound on to ebitda ratios, also to define cost of debt \\(K_d\\))\nnet short term fin debt (short term debt less cash less short term fin assets) , used for assessing the short term perspective",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#current-operating-liabilities",
+    "href": "fin_anal.html#current-operating-liabilities",
+    "title": "5  Intro ##",
+    "section": "8.5 Current operating liabilities",
+    "text": "8.5 Current operating liabilities\n\nWhy current? not time, but normal and recurrent operating cycle - if the liability is recurrent, can be short term or long term! current = recurrent",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#example-dell-technologies",
+    "href": "fin_anal.html#example-dell-technologies",
+    "title": "5  Intro ##",
+    "section": "8.6 Example: dell technologies",
+    "text": "8.6 Example: dell technologies\n\nlong term investments are current assets also\n\nNOWC/Revenues tends to be stable because tied to sales.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#tax-assets-and-liabilities",
+    "href": "fin_anal.html#tax-assets-and-liabilities",
+    "title": "5  Intro ##",
+    "section": "8.7 Tax assets and liabilities",
+    "text": "8.7 Tax assets and liabilities\n\ninclude total tax position as a separate liabilities category\nclassify tax assets to current operating assets, tax liabilities into operating liabilities category",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#helf-for-sale-assetsliabilities",
+    "href": "fin_anal.html#helf-for-sale-assetsliabilities",
+    "title": "5  Intro ##",
+    "section": "8.8 Helf for sale assets/liabilities",
+    "text": "8.8 Helf for sale assets/liabilities\n\nbest way: put in non operating so doesnt affect net operating assets (dont confuse with held for sale!)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#summary-of-importan-metrics-from-managerial-format",
+    "href": "fin_anal.html#summary-of-importan-metrics-from-managerial-format",
+    "title": "5  Intro ##",
+    "section": "8.9 Summary of importan metrics from managerial format",
+    "text": "8.9 Summary of importan metrics from managerial format\n\nNOWC\ngross and net invested capital\ngross and net operateing invested capital\nClarify!!\ndebt to equity\nfinancial debt to equity - only financial\ndebt to assets\nNFP to equity\nNFO to equity",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#minorities-interests",
+    "href": "fin_anal.html#minorities-interests",
+    "title": "5  Intro ##",
+    "section": "8.10 Minorities interests",
+    "text": "8.10 Minorities interests\n\nFD/ NE of parent is fin leverage, NE/NE_parent is the shareholding leverage",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#goodwill-and-intangibles",
+    "href": "fin_anal.html#goodwill-and-intangibles",
+    "title": "5  Intro ##",
+    "section": "8.11 Goodwill and intangibles",
+    "text": "8.11 Goodwill and intangibles\n\nmismatch between impairment vs amortization cost - if no impairment, amount of intangibles is not adjusted and a relevant portion of assets is frozen.\nadjust: adjusted total assets (remove goodwill), adjusted net equity (net equity - goodwill)\nratios like Assets/equity, net income/quity. net income/total assets all increase due to denominator decline.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#roe-decomposition-modigliani-miller",
+    "href": "fin_anal.html#roe-decomposition-modigliani-miller",
+    "title": "5  Intro ##",
+    "section": "9.1 ROE decomposition: Modigliani-Miller",
+    "text": "9.1 ROE decomposition: Modigliani-Miller\n\\[\n\\mathrm{ROE}\n=\n\\frac{\\text{Comprehensive Income}}{\\text{Net Equity}}\n=\n\\frac{\\text{Operating Income}}{\\text{Invested Capital}}\n+\n\\left(\n\\frac{\\text{Operating Income}}{\\text{Invested Capital}}\n-\n\\frac{\\text{Financial Expenses}}{\\text{Total Liabilities}}\n\\right)\n\\times\n\\frac{\\text{Total Liabilities}}{\\text{Net Equity}}\n\\times\n\\frac{\\text{Comprehensive Income}}\n{\\text{Income before Unusual Items and Taxes}}\n\\]\n\nComment: the difference in operating profitability and expenses defines whether the company is profitable (ROE positive)\nSecond technical adjustment: we substract total liabilities from total assets to arrive at net results (“clean” from financial income streams).",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#operating-liability-leverage",
+    "href": "fin_anal.html#operating-liability-leverage",
+    "title": "5  Intro ##",
+    "section": "9.2 Operating liability leverage",
+    "text": "9.2 Operating liability leverage\n\nProf Penman proposal: use NOPAT (ne operating profit after tax) instead of operating income\nDecompose NOPAT/Net operating invested capital into NOPAT over gross operating invested capital and diff between nopat ratio and short term borrowing.\nOperative liability x Short term interest rates are the implicit cost, which are then added to NOPAT\nInterest rate: either market or short term interest expenses/st fin liabilities\nModigliani-Miller, ROE decomposition (explain)\nspecial cases: fin assets exceed fin liabilities, net operating invested capital negative (net operating liabilities exceed net assets)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#changes-in-net-equity-and-effects-on-roe",
+    "href": "fin_anal.html#changes-in-net-equity-and-effects-on-roe",
+    "title": "5  Intro ##",
+    "section": "9.3 Changes in net equity and effects on ROE",
+    "text": "9.3 Changes in net equity and effects on ROE\nChanges of net equity depend: - on economic performance: net income vs OCI - shareholder transactions (buybacks, new insuance) - acquisitions, changes in ownership with no loss of control, loss of control.\nwhat of extreme cases?\n\nif net operating assets negative: use gross operating assets instead! Does not maket sense to use net operating assets in decomposition since multiplied by short term interest rate, adds value!\nDCF vs EVA:\nFrom final example: use financial expenses instead on net expenses to arrive to a “good” number",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#income-statement",
+    "href": "fin_anal.html#income-statement",
+    "title": "5  Intro ##",
+    "section": "10.1 Income statement",
+    "text": "10.1 Income statement",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#bs",
+    "href": "fin_anal.html#bs",
+    "title": "5  Intro ##",
+    "section": "10.2 BS",
+    "text": "10.2 BS",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#pipiline-of-indirect-method",
+    "href": "fin_anal.html#pipiline-of-indirect-method",
+    "title": "5  Intro ##",
+    "section": "10.3 Pipiline of indirect method",
+    "text": "10.3 Pipiline of indirect method\n\nAdd net income\nAdjust for non monetary (reval, D&A, impairment)\nAdjust for classification between investing, financing, operating ??\nadjust non cash operations",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#cfoa-operating-activities",
+    "href": "fin_anal.html#cfoa-operating-activities",
+    "title": "5  Intro ##",
+    "section": "10.4 CFOA (operating activities)",
+    "text": "10.4 CFOA (operating activities)\nnet income + 8800 first adjustment: non monetary revenues/expenses D & A + 12000 Impairment + 4000 Revaluation of financial assets -3000\nGains on disposals (adjustment based on activity) -3000 summary”” “Monetary income” - the operations affecting cash flows directly and immediately\nNon monetary then: - change in AR/AP, - tax items - etc.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#breaking-down-change-in-ppe",
+    "href": "fin_anal.html#breaking-down-change-in-ppe",
+    "title": "5  Intro ##",
+    "section": "10.5 Breaking down change in PPE",
+    "text": "10.5 Breaking down change in PPE\n\nGross change (excl depr) = 25 000\nnote 1: contribution from shareholders + 10000\nnote 6: purchase + 25 000 (5000 through leases, 20000 through supplier purchases)\nnote 7: sales - 60000",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#financial-changes",
+    "href": "fin_anal.html#financial-changes",
+    "title": "5  Intro ##",
+    "section": "10.6 Financial changes",
+    "text": "10.6 Financial changes\n\nLT fin loans consist of new loans and reclassification to short term portion -18000",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "real_anal.html",
+    "href": "real_anal.html",
+    "title": "6  Sets",
+    "section": "",
+    "text": "6.0.1 Proposition (well-ordering)\nEvery nonempty set X can be well ordered.\nProof:\n\nLet X be non-empty, order it by inclusion. Let \\(\\mathcal{C} = \\{ x \\in X: x \\in E_i \\}\\) the collection \\(\\{ E_i \\}\\) is a partially ordered collection of subsets of X. By Hausdorff maximal principle, there is a maximal linearly ordered subset of X, call it \\(E_{max}\\), clearly \\(E_{max} \\subseteq \\{ E_i \\}\\) .",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Sets</span>"
+    ]
+  },
+  {
     "objectID": "Stats_practice.html",
     "href": "Stats_practice.html",
     "title": "8  f_X(x)",
@@ -30,43 +330,23 @@
     ]
   },
   {
-    "objectID": "adv_macro.html",
-    "href": "adv_macro.html",
-    "title": "1  Lecture 1: Hank model ##",
-    "section": "",
-    "text": "$$",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lecture 1: Hank model ##</span>"
-    ]
-  },
-  {
-    "objectID": "comp_stats.html",
-    "href": "comp_stats.html",
-    "title": "3  Summary",
-    "section": "",
-    "text": "In summary, this book has no content whatsoever.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Summary</span>"
-    ]
-  },
-  {
     "objectID": "Stats_practice.html#d-obtain-asymptotic-interval-for-x_m",
     "href": "Stats_practice.html#d-obtain-asymptotic-interval-for-x_m",
     "title": "8  f_X(x)",
     "section": "8.4 (d) obtain asymptotic interval for \\(x_m\\)",
-    "text": "8.4 (d) obtain asymptotic interval for \\(x_m\\)\n\\[\n\\begin{array}{ll}\n\\text{ (1) asymptotic var prop }:& \\hat{\\theta} \\text{ is MLE } \\implies 2^{1 + \\frac{1}{\\hat{\\theta}}} \\text{ is MLE } for 2^{1 + \\frac{1}{\\theta}}\\\\[0.5em]\n\\text{ (2) By CLT + asymptotic prop of MLE:}& \\hat{\\theta} \\sim \\mathcal{N}(\\theta, \\frac{1}{I_{\\underline{X}}(\\theta)})\\\\[0.5em]\n\\text{ (3) By Delta method, } \\tilde{\\theta} = g(\\hat{\\theta}) \\sim \\mathcal{N}(g(\\theta), \\frac{(g'(\\theta))^2}{I_{\\underline{X}}(\\theta)}) \\text{ where } (g'(\\theta ))^2 = (2^{1 + \\frac{1}{\\theta}} \\ln 2 (-1) \\frac{1}{\\theta^2})^2 = 2^{2(1 + \\frac{1}{\\theta})} (\\ln 2)^2 \\frac{1}{\\theta^4}\\\\[0.5em]\n\\text{ (4) now obtain Fischer for the sample}&\nI_{\\underline{X}}(\\theta) = - \\mathbb{E}(\\frac{\\partial^2 \\ell }{\\partial {\\theta}^2}) = \\frac{n}{\\theta^2}\\\\[0.5em]\n\\text{ (5) now calculate the asympt variance}& \\mathrm{Avar}(\\tilde{\\theta}) = 2^{2(1 + \\frac{1}{\\theta})} (\\ln 2)^2 \\frac{1}{n \\theta^2} \\implies x_m \\in \\tilde{\\theta} \\pm z_\\alpha \\frac{2^{1 + \\frac{1}{\\theta}} (\\ln 2)^2}{\\theta \\sqrt{n}}\n\\end{array}\n\\]",
+    "text": "8.4 (d) obtain asymptotic interval for \\(x_m\\)\n\\[\n\\begin{array}{ll}\n\\text{ (1) asymptotic var prop }:& \\hat{\\theta} \\text{ is MLE } \\implies 2^{1 + \\frac{1}{\\hat{\\theta}}} \\text{ is MLE } for 2^{1 + \\frac{1}{\\theta}}\\\\[0.5em]\n\\text{ (2) By CLT + asymptotic prop of MLE:}& \\hat{\\theta} \\sim \\mathcal{N}(\\theta, \\frac{1}{I_{\\underline{X}}(\\theta)})\\\\[0.5em]\n\\text{ (3) By Delta method, } \\tilde{\\theta} = g(\\hat{\\theta}) \\sim \\mathcal{N}(g(\\theta), \\frac{(g'(\\theta))^2}{I_{\\underline{X}}(\\theta)}) \\text{ where } (g'(\\theta ))^2 = (2^{1 + \\frac{1}{\\theta}} \\ln 2 (-1) \\frac{1}{\\theta^2})^2 = 2^{2(1 + \\frac{1}{\\theta})} (\\ln 2)^2 \\frac{1}{\\theta^4}\\\\[0.5em]\n\\text{ (4) now obtain Fischer for the sample}&\nI_{\\underline{X}}(\\theta) = - \\mathbb{E}(\\frac{\\partial^2 \\ell }{\\partial {\\theta}^2}) = \\frac{n}{\\theta^2}\\\\[0.5em]\n\\text{ (5) now calculate the asympt variance}& \\mathrm{Avar}(\\tilde{\\theta}) = 2^{2(1 + \\frac{1}{\\theta})} (\\ln 2)^2 \\frac{1}{n \\theta^2} \\implies x_m \\in \\tilde{\\theta} \\pm z_{\\alpha/2} \\frac{2^{1 + \\frac{1}{\\hat{\\theta}} \\ln 2}}{\\hat{\\theta} \\sqrt{n}}\n\\end{array}\n\\]",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>f_X(x)</span>"
     ]
   },
   {
-    "objectID": "real_anal.html",
-    "href": "real_anal.html",
-    "title": "6  Sets #",
-    "section": "",
-    "text": "::: {#prp - cardinality}\n[ card(X) card(Y) iff card(Y) card(X) ]\n:::",
+    "objectID": "Stats_practice.html#practice-the-graph",
+    "href": "Stats_practice.html#practice-the-graph",
+    "title": "8  f_X(x)",
+    "section": "8.5 Practice the graph",
+    "text": "8.5 Practice the graph",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Sets #</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>f_X(x)</span>"
     ]
   }
 ]
