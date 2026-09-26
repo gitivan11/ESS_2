@@ -121,6 +121,21 @@ Gross profit/added value vs contribution margin (net revenues - variable costs)
 - Liquidity = fewer than vs longer than 12 months
 - Managerial - operating vs non operating activities
 
+
+## Some ratios ## 
+
+
+## Net working capital analysis
+
+| Days-in ratio | Formula | Turnover ratio |
+|---|---|---:|
+| Days sales outstanding (DSO) | AR / (Net sales / 360) | Net sales / AR |
+| Days inventory outstanding (DIO) | Inventory / (COGS / 360) | COGS / Inventory |
+| Days payable outstanding (DPO) | AP / (COGS / 360) | COGS / AP |
+| Cash conversion cycle | DSO + DIO − DPO | — |
+
+: The ratio table
+
 ## Current assets/liabilities ##
 
 - accoridng to IAS3, not only overlap with short term (liquidity) OR current (operating) (managerial) - **hybrid definition**, based on time but also length of business cycle
