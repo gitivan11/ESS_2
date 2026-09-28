@@ -53,8 +53,8 @@
     "objectID": "fin_anal.html#types-of-variation-in-is",
     "href": "fin_anal.html#types-of-variation-in-is",
     "title": "5  Intro ##",
-    "section": "6.5 4 types of variation in IS",
-    "text": "6.5 4 types of variation in IS\n\nrecurring vs non recurring (normal)\ndiscretion and possible red flags (fraud)",
+    "section": "6.4 4 types of variation in IS",
+    "text": "6.4 4 types of variation in IS\n\nrecurring vs non recurring (normal)\ndiscretion and possible red flags (fraud)",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
     ]
@@ -63,8 +63,8 @@
     "objectID": "fin_anal.html#oci-items",
     "href": "fin_anal.html#oci-items",
     "title": "5  Intro ##",
-    "section": "6.6 OCI items",
-    "text": "6.6 OCI items\n\nrevalaution surplus changes\nremeasurements of benefit plans\ntranslations (currency differences)\nfair value remeasurement changes\ngains and losses on hedging instruments",
+    "section": "6.5 OCI items",
+    "text": "6.5 OCI items\n\nrevalaution surplus changes\nremeasurements of benefit plans\ntranslations (currency differences)\nfair value remeasurement changes\ngains and losses on hedging instruments",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
     ]
@@ -73,8 +73,8 @@
     "objectID": "fin_anal.html#trend-analysis",
     "href": "fin_anal.html#trend-analysis",
     "title": "5  Intro ##",
-    "section": "6.7 Trend analysis",
-    "text": "6.7 Trend analysis\n\nrecurring vs non recurring\ndiscretionary\nanomalous (red flags)\n\ntechniques - bridge analysis: - stacked bar chart - CAGR",
+    "section": "6.6 Trend analysis",
+    "text": "6.6 Trend analysis\n\nrecurring vs non recurring\ndiscretionary\nanomalous (red flags)\n\ntechniques - bridge analysis: - stacked bar chart - CAGR",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
     ]
@@ -84,7 +84,7 @@
     "href": "fin_anal.html#three-formats",
     "title": "5  Intro ##",
     "section": "7.1 Three formats",
-    "text": "7.1 Three formats\nGross profit/added value vs contribution margin (net revenues - variable costs)\n::: {#b5598cb6 .cell execution_count=1} {.python .cell-code}  import pandas as pd  table = pd.DataFrame({     \"Gross Profit\": [\"nature of expenses, does not include R&D\"],      \"Value Added\": [\"only internal costs\"],     \"Contribution margin\": [\"Minus variable cost\"]  })  table\n::: {.cell-output .cell-output-display execution_count=1} ```{=html}\n\n\n\n\n\n\n\n\nGross Profit\n\n\nValue Added\n\n\nContribution margin\n\n\n\n\n\n\n0\n\n\nnature of expenses, does not include R&D\n\n\nonly internal costs\n\n\nMinus variable cost\n\n\n\n\n\n``` ::: :::",
+    "text": "7.1 Three formats\nGross profit/added value vs contribution margin (net revenues - variable costs)\n::: {#17a98cef .cell execution_count=1} {.python .cell-code}  import pandas as pd  table = pd.DataFrame({     \"Gross Profit\": [\"nature of expenses, does not include R&D\"],      \"Value Added\": [\"only internal costs\"],     \"Contribution margin\": [\"Minus variable cost\"]  })  table\n::: {.cell-output .cell-output-display execution_count=1} ```{=html}\n\n\n\n\n\n\n\n\nGross Profit\n\n\nValue Added\n\n\nContribution margin\n\n\n\n\n\n\n0\n\n\nnature of expenses, does not include R&D\n\n\nonly internal costs\n\n\nMinus variable cost\n\n\n\n\n\n``` ::: :::",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
     ]
@@ -103,8 +103,8 @@
     "objectID": "fin_anal.html#current-assetsliabilities",
     "href": "fin_anal.html#current-assetsliabilities",
     "title": "5  Intro ##",
-    "section": "8.2 Current assets/liabilities",
-    "text": "8.2 Current assets/liabilities\n\naccoridng to IAS3, not only overlap with short term (liquidity) OR current (operating) (managerial) - hybrid definition, based on time but also length of business cycle\nThe definition relies on realizing within business cycle or 12 montths after reporting (thats the only overlap)\nprofessional analaysts use managerial = better!\nInvestment properties classified as non current operating assets.",
+    "section": "8.3 Current assets/liabilities",
+    "text": "8.3 Current assets/liabilities\n\naccoridng to IAS3, not only overlap with short term (liquidity) OR current (operating) (managerial) - hybrid definition, based on time but also length of business cycle\nThe definition relies on realizing within business cycle or 12 montths after reporting (thats the only overlap)\nprofessional analaysts use managerial = better!\nInvestment properties classified as non current operating assets.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
     ]
@@ -113,8 +113,8 @@
     "objectID": "fin_anal.html#cash-and-cash-equivalents",
     "href": "fin_anal.html#cash-and-cash-equivalents",
     "title": "5  Intro ##",
-    "section": "8.3 Cash and Cash equivalents",
-    "text": "8.3 Cash and Cash equivalents\n\nclassified as non operating",
+    "section": "8.4 Cash and Cash equivalents",
+    "text": "8.4 Cash and Cash equivalents\n\nclassified as non operating",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
     ]
@@ -123,8 +123,8 @@
     "objectID": "fin_anal.html#ways-to-analyze-th-debts",
     "href": "fin_anal.html#ways-to-analyze-th-debts",
     "title": "5  Intro ##",
-    "section": "8.4 Ways to analyze th debts",
-    "text": "8.4 Ways to analyze th debts\n\nnet debts (difference iin total debts/assets), used for modigliani miller (view decomp)\nnet financial position (total debt - cash - short term fin assets) minus net short term financial debts (used as upper bound on to ebitda ratios, also to define cost of debt \\(K_d\\))\nnet short term fin debt (short term debt less cash less short term fin assets) , used for assessing the short term perspective",
+    "section": "8.5 Ways to analyze th debts",
+    "text": "8.5 Ways to analyze th debts\n\nnet debts (difference iin total debts/assets), used for modigliani miller (view decomp)\nnet financial position (total debt - cash - short term fin assets) minus net short term financial debts (used as upper bound on to ebitda ratios, also to define cost of debt \\(K_d\\))\nnet short term fin debt (short term debt less cash less short term fin assets) , used for assessing the short term perspective",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
     ]
@@ -133,8 +133,8 @@
     "objectID": "fin_anal.html#current-operating-liabilities",
     "href": "fin_anal.html#current-operating-liabilities",
     "title": "5  Intro ##",
-    "section": "8.5 Current operating liabilities",
-    "text": "8.5 Current operating liabilities\n\nWhy current? not time, but normal and recurrent operating cycle - if the liability is recurrent, can be short term or long term! current = recurrent",
+    "section": "8.6 Current operating liabilities",
+    "text": "8.6 Current operating liabilities\n\nWhy current? not time, but normal and recurrent operating cycle - if the liability is recurrent, can be short term or long term! current = recurrent",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
     ]
@@ -143,8 +143,8 @@
     "objectID": "fin_anal.html#example-dell-technologies",
     "href": "fin_anal.html#example-dell-technologies",
     "title": "5  Intro ##",
-    "section": "8.6 Example: dell technologies",
-    "text": "8.6 Example: dell technologies\n\nlong term investments are current assets also\n\nNOWC/Revenues tends to be stable because tied to sales.",
+    "section": "8.7 Example: dell technologies",
+    "text": "8.7 Example: dell technologies\n\nlong term investments are current assets also\n\nNOWC/Revenues tends to be stable because tied to sales.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
     ]
@@ -153,8 +153,8 @@
     "objectID": "fin_anal.html#tax-assets-and-liabilities",
     "href": "fin_anal.html#tax-assets-and-liabilities",
     "title": "5  Intro ##",
-    "section": "8.7 Tax assets and liabilities",
-    "text": "8.7 Tax assets and liabilities\n\ninclude total tax position as a separate liabilities category\nclassify tax assets to current operating assets, tax liabilities into operating liabilities category",
+    "section": "8.8 Tax assets and liabilities",
+    "text": "8.8 Tax assets and liabilities\n\ninclude total tax position as a separate liabilities category\nclassify tax assets to current operating assets, tax liabilities into operating liabilities category",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
     ]
@@ -163,8 +163,8 @@
     "objectID": "fin_anal.html#helf-for-sale-assetsliabilities",
     "href": "fin_anal.html#helf-for-sale-assetsliabilities",
     "title": "5  Intro ##",
-    "section": "8.8 Helf for sale assets/liabilities",
-    "text": "8.8 Helf for sale assets/liabilities\n\nbest way: put in non operating so doesnt affect net operating assets (dont confuse with held for sale!)",
+    "section": "8.9 Helf for sale assets/liabilities",
+    "text": "8.9 Helf for sale assets/liabilities\n\nbest way: put in non operating so doesnt affect net operating assets (dont confuse with held for sale!)",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
     ]
@@ -173,8 +173,8 @@
     "objectID": "fin_anal.html#summary-of-importan-metrics-from-managerial-format",
     "href": "fin_anal.html#summary-of-importan-metrics-from-managerial-format",
     "title": "5  Intro ##",
-    "section": "8.9 Summary of importan metrics from managerial format",
-    "text": "8.9 Summary of importan metrics from managerial format\n\nNOWC\ngross and net invested capital\ngross and net operateing invested capital\nClarify!!\ndebt to equity\nfinancial debt to equity - only financial\ndebt to assets\nNFP to equity\nNFO to equity",
+    "section": "8.10 Summary of importan metrics from managerial format",
+    "text": "8.10 Summary of importan metrics from managerial format\n\nNOWC\ngross and net invested capital\ngross and net operateing invested capital\nClarify!!\ndebt to equity\nfinancial debt to equity - only financial\ndebt to assets\nNFP to equity\nNFO to equity",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
     ]
@@ -183,8 +183,8 @@
     "objectID": "fin_anal.html#minorities-interests",
     "href": "fin_anal.html#minorities-interests",
     "title": "5  Intro ##",
-    "section": "8.10 Minorities interests",
-    "text": "8.10 Minorities interests\n\nFD/ NE of parent is fin leverage, NE/NE_parent is the shareholding leverage",
+    "section": "8.11 Minorities interests",
+    "text": "8.11 Minorities interests\n\nFD/ NE of parent is fin leverage, NE/NE_parent is the shareholding leverage",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
     ]
@@ -193,8 +193,8 @@
     "objectID": "fin_anal.html#goodwill-and-intangibles",
     "href": "fin_anal.html#goodwill-and-intangibles",
     "title": "5  Intro ##",
-    "section": "8.11 Goodwill and intangibles",
-    "text": "8.11 Goodwill and intangibles\n\nmismatch between impairment vs amortization cost - if no impairment, amount of intangibles is not adjusted and a relevant portion of assets is frozen.\nadjust: adjusted total assets (remove goodwill), adjusted net equity (net equity - goodwill)\nratios like Assets/equity, net income/quity. net income/total assets all increase due to denominator decline.",
+    "section": "8.12 Goodwill and intangibles",
+    "text": "8.12 Goodwill and intangibles\n\nmismatch between impairment vs amortization cost - if no impairment, amount of intangibles is not adjusted and a relevant portion of assets is frozen.\nadjust: adjusted total assets (remove goodwill), adjusted net equity (net equity - goodwill)\nratios like Assets/equity, net income/quity. net income/total assets all increase due to denominator decline.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
     ]
@@ -347,6 +347,86 @@
     "text": "8.5 Practice the graph",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>f_X(x)</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#net-working-capital-analysis",
+    "href": "fin_anal.html#net-working-capital-analysis",
+    "title": "5  Intro ##",
+    "section": "8.2 Net working capital analysis",
+    "text": "8.2 Net working capital analysis\n\n\n\n\n\n\n\n\nDays-In ratio\nFormula\nRatio\n\n\n\n\nDays sales outstanding\nAR/ (Net Sales/ 360)\nNet sales / AR\n\n\nDays inventory outstanding (DSO)\nInventory / (Sales/360)\nCogs/inventiory\n\n\ndays payable outstanding (DPO)\nDSO + DIO - DPO\n…",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#cash-and-cash-equivalents-1",
+    "href": "fin_anal.html#cash-and-cash-equivalents-1",
+    "title": "5  Intro ##",
+    "section": "11.1 Cash and cash equivalents",
+    "text": "11.1 Cash and cash equivalents\n\nshort term and highly liquid\nequity shares excluded excpet preferred shares with a specified redemption date\nmarketavle securities are usually classified as financial assets, not cash and cash equivalents\nbank overdraft may or may not be classified as cash and cash equivalents depending on the logic",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#classification-of-flows",
+    "href": "fin_anal.html#classification-of-flows",
+    "title": "5  Intro ##",
+    "section": "11.2 Classification of flows",
+    "text": "11.2 Classification of flows\n\nsame as the general classification logic",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#cash-flow-from-operating-activities-direct-vs-indirect",
+    "href": "fin_anal.html#cash-flow-from-operating-activities-direct-vs-indirect",
+    "title": "5  Intro ##",
+    "section": "11.3 Cash flow from operating activities: direct vs indirect",
+    "text": "11.3 Cash flow from operating activities: direct vs indirect\n\ndirect: gross receipts disclosed\nindirect: adjustments from operating profit or loss",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#taxes",
+    "href": "fin_anal.html#taxes",
+    "title": "5  Intro ##",
+    "section": "11.4 Taxes",
+    "text": "11.4 Taxes\n\nusually operating",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#changes-in-ownership",
+    "href": "fin_anal.html#changes-in-ownership",
+    "title": "5  Intro ##",
+    "section": "11.5 Changes in ownership",
+    "text": "11.5 Changes in ownership\n\nwe account for the percentage of control times percentage paid in cash + the acquired cash assets.\nCash flows from cash-financed acquisition must be reported in investing section",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#non-cash",
+    "href": "fin_anal.html#non-cash",
+    "title": "5  Intro ##",
+    "section": "11.6 Non cash",
+    "text": "11.6 Non cash\n\nacquisition of assets by lease or by assuming liabilities\nacquisition by way of equity issue\ndebt to equity conversion",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
+    ]
+  },
+  {
+    "objectID": "fin_anal.html#forex",
+    "href": "fin_anal.html#forex",
+    "title": "5  Intro ##",
+    "section": "11.7 Forex",
+    "text": "11.7 Forex\n\nmust be shown separately, as a reconciliation item in the consolidated statement of cash flow.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Intro ##</span>"
     ]
   }
 ]

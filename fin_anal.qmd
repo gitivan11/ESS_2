@@ -136,6 +136,7 @@ Gross profit/added value vs contribution margin (net revenues - variable costs)
 
 : The ratio table
 
+
 ## Current assets/liabilities ##
 
 - accoridng to IAS3, not only overlap with short term (liquidity) OR current (operating) (managerial) - **hybrid definition**, based on time but also length of business cycle
@@ -157,6 +158,15 @@ Gross profit/added value vs contribution margin (net revenues - variable costs)
 
 - Why current? not time, but normal and recurrent operating cycle - if the liability is recurrent, can be short term or long term! **current = recurrent**
 
+## table with current/non current vs operating/non-operating
+
+|  | **Operating** | **Non-operating / financial** |
+|---|---|---|
+| **Current assets** | **Accounts receivable**<br>Amounts owed by customers for ordinary sales.<br><br>**Inventory**<br>Goods held for sale or production.<br><br>**Prepayments / contract assets** | **Cash and cash equivalents**<br>Cash not needed for the immediate operating cycle.<br><br>**Marketable securities**<br>Short-term bond or equity investments.<br><br>**Interest receivable** |
+| **Non-current assets** | **PPE**<br>Factories, machinery, stores, offices used in the business.<br><br>**Right-of-use assets**<br>Leased premises or equipment used in operations.<br><br>**Operating intangibles**<br>Patents, brands, production software. | **Long-term financial investments**<br>Unrelated equity or bond holdings.<br><br>**Loans to third parties**<br><br>**Non-operating real estate**<br>Property held purely for investment. |
+
+: Classification of assets by maturity and operating role {#tbl-asset-classification}
+
 ## Example: dell technologies ## 
 
 - long term investments are current assets also     
@@ -167,17 +177,22 @@ Gross profit/added value vs contribution margin (net revenues - variable costs)
 - include total tax position as a separate liabilities category 
 - classify tax assets to current operating assets, tax liabilities into operating liabilities category
 
-## Helf for sale assets/liabilities ##
+## Held for sale assets/liabilities ##
 
-- best way: put in non operating so doesnt affect net operating assets (dont confuse with held for sale!)
+- best way: put in non operating so doesnt affect net operating assets (dont confuse with held for trade!)
 
-## Summary of importan metrics from managerial format ##
+## Summary of important metrics from managerial format ##
 
-- NOWC
-- gross and net invested capital 
-- gross and net operateing invested capital 
-- **Clarify**!!
+| Measure | Definition | Formula | Intuition |
+|---|---|---|---|
+| **Net operating invested capital (NOIC)** | Net capital committed to the firm’s core operations. It excludes financing and non-operating assets. | $NOIC = Operating\ assets - Operating\ liabilities$<br><br>Equivalently:<br>$NOIC = NOWC + Net\ operating\ non\text{-}current\ assets$ | The amount the firm must finance with debt and equity to run the business after accounting for spontaneous operating funding, such as supplier credit. |
+| **Net operating working capital (NOWC)** | Net short-term capital tied up in the operating cycle. | $NOWC = Operating\ current\ assets - Operating\ current\ liabilities$<br><br>Typically:<br>$NOWC = AR + Inventory + Other\ operating\ CA - AP - Accrued\ operating\ CL$ | Cash tied up in credit to customers and inventory, net of credit received from suppliers and other operating creditors. An increase in NOWC is a use of cash. |
+| **Net financial position (NFP)** | The firm’s net interest-bearing financial debt after deducting financial liquidity. | $NFP = Interest\text{-}bearing\ financial\ debt - Cash - Marketable\ securities$ | The company’s net financial obligation to lenders. A positive NFP means net debt; a negative NFP means net cash. |
 
+: Core balance-sheet measures in managerial analysis {#tbl-core-bs-measures}
+
+
+**Ratios**: 
  - debt to equity
  - financial debt to equity - only financial 
  - debt to assets 
@@ -187,6 +202,8 @@ Gross profit/added value vs contribution margin (net revenues - variable costs)
 ## Minorities interests ## 
 
 - FD/ NE of parent  is **fin leverage**, NE/NE_parent is the **shareholding leverage**
+- if minorities treated as debt when we highlight reliance on minorities' capital, then treat as financial debt and reconcile income statement (dividends are fin expenses)
+
 
 ## Goodwill and intangibles ## 
 
@@ -194,7 +211,20 @@ Gross profit/added value vs contribution margin (net revenues - variable costs)
 - adjust: adjusted total assets (remove goodwill), adjusted net equity (net equity - goodwill)
 - ratios like Assets/equity, net income/quity. net income/total assets all increase due to denominator decline. 
 
-# lecture 6: DuPont formula #
+# lecture 6: ROI, ROE #
+
+
+## ROI ## 
+
+- measure of operating efficiency 
+- $\text{Operating income}/\text{invested capital}
+- **Decomposition**: 
+
+$$ ROI = \frac{operating income}{Net revenues} \times \frac{Net revenues}{Invested capital} = ROS \times Asset \; turnover
+$$ 
+
+- Decompositon into **core vs non core**: 
+
 
 ## ROE decomposition: Modigliani-Miller ## 
 
@@ -282,9 +312,43 @@ Non monetary then:
 ## Financial changes ## 
 - LT fin loans consist of new loans and reclassification to short term portion -18000
 
+# Lecture 8: Standard cash flow statements #
+
+## Cash and cash equivalents ## 
+
+- short term and highly liquid
+- equity shares excluded excpet preferred shares with a specified redemption date 
+- marketavle securities are usually classified as financial assets, not cash and cash equivalents 
+- bank overdraft may or may not be classified as cash and cash equivalents depending on the logic 
+
+## Classification of flows ##
+
+- same as the general classification logic 
+
+## Cash flow from operating activities: direct vs indirect ## 
+
+- direct: gross receipts disclosed 
+- indirect: adjustments from operating profit or loss
 
 
+## Taxes ##
 
+- usually operating
+
+## Changes in ownership ## 
+
+- we account for the percentage of control times percentage paid in cash + the acquired cash assets. 
+- Cash flows from cash-financed acquisition must be reported in investing section
+
+## Non cash ## 
+
+- acquisition of assets by lease or by assuming liabilities
+- acquisition by way of equity issue 
+- debt to equity conversion
+
+## Forex ## 
+
+- must be shown separately, as a reconciliation item in the consolidated statement of cash flow. 
 
 
 
