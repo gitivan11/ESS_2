@@ -224,39 +224,58 @@ $$ ROI = \frac{operating income}{Net revenues} \times \frac{Net revenues}{Invest
 $$ 
 
 - Decompositon into **core vs non core**: 
+- The case of retail: 
 
+$$
+\frac{OI}{IC}
+=
+\underbrace{\frac{\text{Gross margin}}{\text{Inventory}}}_{\text{GMROI}}
+\times
+\frac{\text{Inventory}}{\text{Invested Capital}}
+-
+\frac{\text{Op. Costs}}{\text{Invested Capital}}
+$$
+
+**Interpretation**: 
+- Equity: ROI signals value creation but decomposes into ROS times turnover (turnover suspicious if denominator affected via depreciation etc.)
+- Credit: gross vs net ROI - net may distort results if too much net capital tied in operations improves the ratio. Analyse replacement ratios and capex intensity. 
 
 ## ROE decomposition: Modigliani-Miller ## 
 
+
+- Definition: 
+$$ ROE = \frac{Total comprehensive income}{Equity}
+$$
+
+- DuPont: profit margin, asset turnover, equity multiplier (for five factor add NI/EBT, EBT/EBIT and EBIT/Sales)
+
+- Problems with DuPont: 
+   1. Inclusion if unusual items in Ebit/Net income ratio
+   2. Leverage ratio total assets to equity influenced by debt
+   3. financial cost implicit in EBT/EBIT but no classification of fin income.
 $$
 \mathrm{ROE}
 =
 \frac{\text{Comprehensive Income}}{\text{Net Equity}}
 =
-\frac{\text{Operating Income}}{\text{Invested Capital}}
+[ \frac{\text{Operating Income}}{\text{Invested Capital}}
 +
 \left(
-\frac{\text{Operating Income}}{\text{Invested Capital}}
+\frac{\text{Operating Income}}{\text{Invested Capital}}  
 -
-\frac{\text{Financial Expenses}}{\text{Total Liabilities}}
-\right)
-\times
-\frac{\text{Total Liabilities}}{\text{Net Equity}}
-\times
-\frac{\text{Comprehensive Income}}
-{\text{Income before Unusual Items and Taxes}}
+\frac{\text{Financial Expenses}}{\text{Total Liabilities}} \right) \times \frac{Total Liability}{Net Equity} ] \times \frac{Comp. Income}{Income before Unusual Items and taxes}
 $$
 
-- Comment: the difference in operating profitability and expenses defines whether the company is profitable (ROE positive)
-- Second technical adjustment: we substract total liabilities from total assets to arrive at net results ("clean" from financial income streams). 
+- **First adjustment**: use RONA instead of Invested capital and financial liabilities instead of total liabilities 
+- **Second adjustment**: substract financial income from financial expenses and financial assets from financial liabilities to "clean" from financial activities and isolate only operating ones. 
 
-## Operating liability leverage ## 
+## Penman's decomposition ## 
 
-- Prof Penman proposal: use NOPAT (ne operating profit after tax) instead of operating income 
+- Prof Penman proposal: use NOPAT (ne operating profit after tax) instead of operating income, use net expenses after taxes, use income after taxes.  
 - Decompose NOPAT/Net operating invested capital into NOPAT over gross operating invested capital and diff between nopat ratio and short term borrowing. 
 - Operative liability x Short term interest rates are the implicit cost, which are then added to NOPAT
 - Interest rate: either market or short term interest expenses/st fin liabilities
-- **Modigliani-Miller, ROE decomposition** (explain)
+
 - **special cases**: fin assets exceed fin liabilities, net operating invested capital negative (net operating liabilities exceed net assets)
 
 ## Changes in net equity and effects on ROE ##

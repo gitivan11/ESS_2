@@ -497,3 +497,475 @@ d(ln B(t)) &= r(t) \\
 B(T) = e^{\int_0^T r(t) dt}
 \end{align}
 $$ 
+
+# Lecture 5 #
+
+## Recap for riskless ## 
+
+$$ \frac{\Delta B(t)}{B(t)} \approx \frac{B(t + \Delta t) - B(t)}{B(t)} 
+$$ 
+
+We approximate the preturns of the riskless asset in continuous time thorugh first order taylor approx 
+
+$$ \int_0^T d(ln B(t)) = \int_0^T \frac{d B(t){B(t)}} = \int_0^T r(t) dt
+$$ 
+
+the term $ \int_0^T d(ln B(t)) $ equals $ ln B(T) - ln B(0) $ were the sec term is 0 and so 
+
+$$ B(T) (\omega) = exp^{\int_0^T r(t \mid \omega ) dt}
+$$ 
+
+
+## For risky ## 
+
+$$ \frac{\Delta S(t)}{S(t)} = \mu(t) \Delta t + \sigma (t) \Delta \Omega (t) 
+$$ 
+
+where $ \mu (t) \Delta t $ is the *t-expected component*
+and $ W (t) \sim M (0, \Delta t)$ is an independent of $\mathcal{F(t)}$ component (noise)
+
+Taking expectations: 
+
+$$ E^p_t [\frac{\Delta S(t)}{S(t)}] = E^p_t [\mu(t) \Delta t + \sigma (t) \Delta \Omega (t)] = \mu(t) \Delta t + \sigma (t) E^p_t [ \Delta W (t)] = \mu (t) \Delta 
+$$ 
+
+
+In words: we expect to get the return equal to the t-expected component. 
+
+Squaring: 
+
+$$ E^p_t [ (\frac{\Delta S(t)}{S(t)})^2] =  E^P_t [ (\mu(t) dt)^2 + (\sigma(t) \Delta W(t))^2 + 2 \mu(t) \Delta t \sigma(t) \Delta W (t)] 
+$$
+
+To simplify, note $E^p [ \Delta W^2 (t)] \aprox \Delta t$ and $E^p (\Delta W (t)) = 0$ so we get: 
+
+$$ (\mu (t) dt)^2 + \sigma^2 (t) \Delta t \approx \sigma^2 (t) \Delta t
+$$ 
+
+Since $(\Delta t)^2$ is small relative to $\Delta t$
+
+
+## Wiener Process (st. brownian) ## 
+
+$W$ is $\mathcal{F}$-adapted, $W(0) = 0$. W has continuous trajectories
+
+W has continuous trajectories, and increments  $W(t + \Delta t) - W(t) \sim \eta (0, \Delta t) $ The idea is to add continuously increments of Brownian motion over time, and normality of the increments helps us derive properties of the process by relying on the central limit theorem. W is the only risk factor affecting the model (we can think of it as the aggregate riskiness of security S). 
+
+- **Note**: W has continuous trajectories nowhere differentiable. Meaning: if $P(\Delta W > 0) = P(\Delta W \leq 0) = 50%$ If we plot the process, depending on how we "zoom" we can find a segment of the curve that changes direction locally (as we "zoom"). Therefore we cannot proxy the change in the function by a tangent. 
+
+How to sum $ \int_0^{\tau}\sigma(t) \Delta W(t)$? We write: 
+
+$$ \int_0^{\tau}\sigma(t) \frac{\Delta W(t)}{\Delta t} \Delta t
+$$
+
+As $\Delta t \to 0$, we get $\frac{\Delta W(t)}{Delta t} \approx \frac{\partial {W}}{\partial t}$, but we cannot do this because W is non differentiable. 
+
+We must define an alternative way to sum the quantitites $\int_0^{\tau} \sigma(t) \Delta W(t)$ as $\Delta t \to 0$, where the integral is the **aggregate shock** on $\frac{\Delta S}{S}$ over $[0, \tau]$. We note: 
+
+ 1. $\sigma(t)$ is constant, so we can factor it out: 
+
+$$ \int_0^{\tau} \sigma \Delta W(t) = \sigma \int_0^{\tau} \Delta W (t) = \sigma (W(\tau) - W(0)) = \sigma W(\tau) 
+$$ 
+
+2.
+$$ \begin{array} \sigma(t) &= \sigma_0 in t \in [ 0, t_1) \\
+\sigma(t) = \sigma_1 \end{array}
+$$
+
+$$
+\begin{aligned}
+\int_0^{\tau} \sigma(t)\,\Delta W(t)
+&=
+\int_0^{t_1} \sigma_0\,\Delta W(t)
++
+\int_{t_1}^{\tau} \sigma_1\,\Delta W(t) \\[4pt]
+&=
+\sigma_0 \int_0^{t_1} \Delta W(t)
++
+\sigma_1 \int_{t_1}^{\tau} \Delta W(t) \\[4pt]
+&=
+\sigma_0
+\underbrace{W(t_1)}_{\eta(0,t_1)}
++
+\sigma_1
+\underbrace{\left(W(\tau)-W(t_1)\right)}_{\eta(0,\tau-t_1)} \\[4pt]
+&\sim
+\eta\left(
+0,\,
+\sigma_0^2 t_1
++
+\sigma_1^2(\tau-t_1)
+\right).
+\end{aligned}
+$$
+
+Where the etas indicate that the increments of Brownian motion are iid normal rv. 
+
+3. 
+$$ \sigma(t) = \begin{cases} \sigma_0 \quad t \in [0, t_1) \\
+                            \underbrace{\sigma (t_1)}_{\mathcal{F}_{t_1}-\text{meas}} \quad t \in [t_1, \tau]
+                \end{cases}
+$$ 
+
+
+Now 
+
+$$ \int_0^{\tau} \sigma(t) d W(t) = \sigma_0 W(t_1) + \underbrace{\sigma(t_1)}_{\mathcal{F}_{t_1}-\text{meas}} \underbrace{(W(\tau) - W(t_1))}_{\text{indep of $\mathcal{F}_1$}}
+$$
+
+Next note: 
+
+$$ E^P [ \int_0^{\tau} \sigma(t) d W(t)] = 0 \quad E^P [(\int_0^{\tau} \sigma(t) dW(t))^2] = \int_0^{\tau} E^P [\sigma^2 (t)] dt = \sigma_0^2 t_1 + E^P [ \sigma^2 (t_1)] (\tau - t_1)
+$$
+
+the intermediate interchange of deriv folow from Ito's identity + Fubini/Tonelli (**explain**)
+
+$$ 0 = E^P [\sigma_0 W(t_1) + \sigma (t_1) (W(\tau) - W(t_1))] = \sigma_0 E^P [W(t_1) ] + E^P [E^P_{t_2}] [ \sigma (t_1) (W(\tau) - W(t_1))] = 0
+$$ 
+
+We verify the second moment: 
+
+$$
+\begin{aligned}
+&E^P \left[
+\left(
+\sigma_0 W(t_1)
++
+\sigma(t_1)\bigl(W(\tau)-W(t_1)\bigr)
+\right)^2
+\right]
+\\[4pt]
+&=
+\sigma_0^2 E^P\left[W(t_1)^2\right]
+\\
+&\quad+
+E^P\left[
+E^P_{t_1}\left[
+\sigma^2(t_1)
+\bigl(W(\tau)-W(t_1)\bigr)^2
+\right]
+\right]
+\\
+&\quad+
+2\sigma_0
+E^P\left[
+E^P_{t_1}\left[
+W(t_1)\sigma(t_1)
+\bigl(W(\tau)-W(t_1)\bigr)
+\right]
+\right]
+\\[6pt]
+&=
+\sigma_0^2 t_1
+\\
+&\quad+
+E^P\left[
+\sigma^2(t_1)
+E^P_{t_1}\left[
+\bigl(W(\tau)-W(t_1)\bigr)^2
+\right]
+\right]
+\\
+&\quad+
+2\sigma_0
+E^P\left[
+W(t_1)\sigma(t_1)
+E^P_{t_1}\left[
+W(\tau)-W(t_1)
+\right]
+\right]
+\\[6pt]
+&=
+\sigma_0^2 t_1
+\\
+&\quad+
+E^P\left[
+\sigma^2(t_1)
+\left(
+\operatorname{Var}_{t_1}
+\bigl(W(\tau)-W(t_1)\bigr)
++
+\left(
+E^P_{t_1}
+\bigl[W(\tau)-W(t_1)\bigr]
+\right)^2
+\right)
+\right]
+\\
+&\quad+
+2\sigma_0
+E^P\left[
+W(t_1)\sigma(t_1)\cdot 0
+\right]
+\\[6pt]
+&=
+\sigma_0^2 t_1
++
+E^P\left[
+\sigma^2(t_1)
+\left(
+(\tau-t_1)+0^2
+\right)
+\right]
++
+0
+\\[6pt]
+&=
+\sigma_0^2 t_1
++
+E^P\left[
+\sigma^2(t_1)(\tau-t_1)
+\right]
+\\[6pt]
+&=
+\boxed{
+\sigma_0^2 t_1
++
+E^P\left[\sigma^2(t_1)\right](\tau-t_1)
+}.
+\end{aligned}
+$$
+
+
+where $E^P(\Delta W(t))^2 = Var(\Delta W) + 0 = \tau - t_1 \text{ on } t \in [t_1, \tau]$
+
+4. Now we want to calculate the covariance between Brownian increments (random shocks): 
+$$ E^P [ \int_0^{\tau} \sigma_1 (t) d W(t) \int_0^{\tau} \sigma_2 (t) dW(t)] = \int_0^{\tau} E^P [\sigma_1 (t) \sigma_2 (t)] dt 
+$$ 
+
+5. $ \int_0^{\tau} \sigma(t) dW(t) $ is a P-martingale on $t \in [0, \tau]$ 
+
+6. $\int_0^{\tau} \sigma(t) d W(t)$ is a **stochastic integral** of $\sigma \text{ in } [0, \tau]$. 
+
+We have $ d M(t) = \sigma(t) d W(t) $
+
+$$ E^P_t [d M(t)] = \sigma (t) E^P_t [ d W(t)] = 0 
+$$ 
+
+where $ W(t + \Delta t) - W(t) $ is F indep. and has mean zero, thus the process is indeed a martingale (**why**?) 
+
+## Switching from returns to levels ## 
+
+
+We know: 
+
+$$ \frac{d S(t)}{S(t)} = \mu(t) dt + \sigma(t) d W(t) 
+$$ 
+
+we would like to determine the current price of the asset, $S(t)$
+
+Problem: $ f(t, x): [0, T] \times R^{+} \to R$, cont. differential wrt t and twice cont differentiable wrt $x \in R^{+}$. 
+$$d f(t, S(t)) = ?$$
+
+$$ d f(t, B(t)) = \frac{\partial{f}}{\partial{t}} (t, B(t)) dt + \frac{\partial f}{\partial{x}} (t, B(t)) dB(t)
+$$
+
+the total variation is defined by the formula above. 
+
+Now: 
+
+$$ d f(t, S(t)) = \frac{\partial{f}}{\partial{t}} (t, S(t)) dt + \frac{\partial{f}}{\partial{x}} (t, S(t)) dS(t)
+$$
+
+Remember that the first moment of differential percentage change is given by:
+
+$$ 
+E^P_t [ \frac{d S(t)}{S(t)}] = \mu(t) dt 
+$$
+
+and the second moment by: 
+
+$$ E^P_t [ (\frac{d(S (t))}{S(t)})^2] = \mu^2 (t) (dt)^2 + \sigma^2 (t) dt 
+$$
+
+With 
+
+$$ E^P_t [ (d S(t))^2] = s^2 (t) (\sigma^2 (t) dt + \mu^2 (dt)^2) \approx s^2 (t) \sigma^2 (t) dt 
+$$ 
+
+Thorugh sec order Taylor approx we write: 
+
+$$
+\begin{aligned}
+df(t,S(t))
+&=
+\frac{\partial f}{\partial t}\,dt
++
+\frac{\partial f}{\partial x}\,dS
++
+\frac{1}{2}
+\frac{\partial^2 f}{\partial t^2}\,(dt)^2
+\\
+&\quad+
+\frac{\partial^2 f}{\partial t \partial x}\,dt\,dS
++
+\frac{1}{2}
+\frac{\partial^2 f}{\partial x^2}\,(dS)^2.
+\end{aligned}
+$$
+
+Plugging in the derived expressions for $d S(t)$ and $(d S(t))^2$ and cancelling the "little" terms, we arrive to the statement of **Ito's Lemma**: 
+
+$$
+\begin{aligned}
+df(t,S(t))
+&=
+\frac{\partial f}{\partial t}(t,S(t))\,dt
++
+\frac{\partial f}{\partial x}(t,S(t))
+\left[
+\mu(t,S(t))\,dt
++
+\sigma(t,S(t))\,dW(t)
+\right]
+\\
+&\quad+
+\frac{1}{2}
+\frac{\partial^2 f}{\partial x^2}(t,S(t))
+\sigma^2(t,S(t))\,dt
+\\[4pt]
+&=
+\left[
+\frac{\partial f}{\partial t}(t,S(t))
++
+\mu(t,S(t))
+\frac{\partial f}{\partial x}(t,S(t))
++
+\frac{1}{2}
+\sigma^2(t,S(t))
+\frac{\partial^2 f}{\partial x^2}(t,S(t))
+\right]dt
+\\
+&\quad+
+\sigma(t,S(t))
+\frac{\partial f}{\partial x}(t,S(t))
+\,dW(t).
+\end{aligned}
+$$
+
+And we can get the solution by substituting $ f(t, S(t)) = ln S(t)$ $f(t, x) = ln x$ $\frac{\partial{f}}{\partial{t}} = 0$ $\frac{\partial{f}}{\partial{t}} = 0$ $\frac{f}{x} = \frac{1}{x}$ $\frac{\partial^2 f}{\partial{x}} = - 1/x^2$
+
+We write: 
+
+$$ \int_0^{\tau} d (ln S(t)) = \int_0^{\tau} (\mu(t) - \frac{\sigma^2 (t)}{2}) dt + \int_0^{\tau} \sigma(t) d W(t)
+$$ 
+
+We cna simplify the first term to $ln S(\tau) - ln S(0)$ and then: 
+
+$$ ln \frac{S(\tau)}{S(0)} = \int_0^{\tau} (\mu - \sigma^2/2) dt + \int_0^{\tau} \sigma dW(t) = \underbrace{(\mu - \frac{\sigma^2}{2}) \tau + \sigma W(\tau)}_{\text{Generalized brownian motion}}
+$$ 
+
+Therefore: 
+
+$$ ln \frac{S(\tau)}{S(0)} \sim \eta ((\mu - \frac{\sigma^2}{2})\tau, \sigma^2 \tau) \implies S \text{ is "log-normal"}
+$$ 
+
+and 
+
+$$ S(\tau) = S(0) exp^{(\mu - \frac{\sigma^2}{2}) \tau + \sigma W(\tau)} 
+$$
+
+We have that S is a deterministic component relying on t and W is the risk factor in t, so observing S is equivalen to observing W in our framework. 
+
+## Strategies ## 
+
+- Let $(\nu_0, \nu_1) = \nu$ and $\nu (t) \text{ is } \mathcal{F}_t \text{-measurable for all t}$
+
+- Suppose S pays dividends. In $ (t, t + \Delta t)$ S pays $d D(t) = q S(t) dt$, $q \geq 0$ is the dividend yield. 
+
+$$ d G(t) = \underbrace{d S(t)}_{\text{capital gain}} + \underbrace{d D(t)}_{\text{cashflow}} = d S(t) + q S(t) dt 
+$$ 
+
+## Self financing strategy with dividends ## 
+
+$ \nu (t) $ strategy at t, at  $ t + dt $ it delivers (future value of strategy $\mu$): 
+
+$$ \nu_0 (t) B(t + dt) + \nu_1 (t) (S(t + dt) + q S(t) dt) = V_{\nu} (t + dt)
+$$ 
+
+
+The instantaneous change in value is given by: 
+
+$$ d V_{\nu} (t) = V_{\nu} (t + \Delta t) - V_{\nu} (t) = \nu_0(t) B(t + dt) + \nu_1 (t) S(t + dt) + \nu_1 (t) q S(t) ft - (\nu_0 (t) B(t) + \nu_1 (t) S(t)) = \nu_0 (t) d Bt + \nu_1 (t) (d S (t) + S(t) q dt)
+$$ 
+
+Hence we define $\nu$ self financing if: 
+
+$$ d V_{\nu} (t) = \nu_0 (t) d B(t) + \nu_1 (t) (d S(t) + S(t) f dt)
+$$ 
+
+ 
+
+and in Discounted terms: 
+
+$$ d \tilde{V}_{\nu} (t) = \nu_1 (t) (d \tilde{S}(t) + q \tilde{S} (t) dt)
+$$
+
+- **Arbitrage**: $\nu$ is self-financing, $V_{\nu}(0) \leq 0$
+and $P(V_{\nu}(\tau) \geq 0) = 1$ and $ P(V_{\nu} (\tau) > 0) > 0$
+- If no arbitrage is satisfies, we can find a risk neutral measure (not unique, uniqueness given by second fundamental theorem). 
+
+- **Definition**: Q is RN, equivalent to P and the gain process of S discounted with $B(t)$ is a Q-martingale: 
+
+$$ 
+d G(t) = d S(t) + q S(t) dt 
+$$
+
+We have (why?)
+
+$$ E^Q_t [d \tilde{G} (t)] = 0 
+$$
+
+And we want to find Q RN: 
+
+$$ d \tilde{G} (t) = d \tilde{S} (t) + q \tilde{S} (t) dt 
+$$
+
+The discounted price is given by: 
+
+
+$$ d \tilde{S} (t) = d (S(t) e^{-rt}) = (d S (t)) e^{-nt} - (r e^{-rt}dt ) S(t) = (e^{-rt} S(t)) ((\mu - r) dt + \sigma d W(t))
+$$
+
+## Market price of risk ## 
+
+- Set $ \alpha \in \mathbf{R}$ s.t. $ \alpha = \frac{\mu + q - r}{\sigma}$. where $\mu$ is the capital gain, $q$ is the dividend gain, $r$ is the instantaneius discount rate and $\sigma$ is the volatility of returns. 
+- By **Girsanov** theorem, there exists a unique $Q = Q(\alpha)$ s.t.:
+
+$$ d W^Q(t) = d W(t) + \alpha dt 
+$$
+
+defines a std BM $W^Q$. 
+
+And
+
+$$ d \tilde{G} = \tilde{S} (t) (\alpha \sigma dt + \sigma d W(t) ) = \tilde{S}(t) \sigma \underbrace{ (\alpha dt + d W(t))}_{d W^Q (t)} 
+$$
+
+- NA holds by first fundamental theorem, if Q is unique, then the market is complete by the second fundamental theorem. 
+
+## Dynamics of S wrt Q ## 
+
+1. 
+
+$$ \frac{d S(t)}{S(t)} = \mu dt + \sigma d W(t) = \mu dt + \sigma d W^Q (t) - \sigma \alpha dt = (r - q) dt + \sigma d W^Q(t)
+$$ 
+
+
+2. $\nu$ is self financing, implying $\tilde{V}_{\nu}$ is a Q-martingale. Indeed: 
+
+$$ d \tilde{V}_{\nu}(t) = \nu_1 (t) (d \tilde{S}(t) + q \tilde{S}(t) dt) = \nu_1 \tilde{S} (t) \sigma d W^Q(t) 
+$$
+
+Moreover, 
+
+$$ E^Q_t [ d \tilde{V}_{\nu} (t) ] = \nu_1 (t) \tilde{S} (t) \sigma E^Q_t [dW^Q (t)] = 0 \implies \text{discounted value is a Q-martingale}
+$$
+
+## Derviing the risk neutral measure for European option from risk neutral measure for self financing strategies ## 
+
+1. Let there exist a Q RN. By first fundamental theorem, this implies no arbotrage. 
+
+2. $\nu$ is self financing, $V_{\nu} (0) \leq 0$, $Q(\tilde{V}_{\nu} (T) \geq 0) = 1$ and $Q (\tilde{V} (\tau) > 0) > 0$
+
+3. $V(0) = \tilde{V}_{\nu} (0) = E^Q [ \tilde{V}_{\nu} (\tau)] > 0 \implies V_{\nu}(0) > 0 \implies NA$
