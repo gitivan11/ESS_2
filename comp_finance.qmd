@@ -52,7 +52,7 @@ $$
 
 - We can use conditional expectation to narrow down the outcomes, if we condition on the particular element $f^t_h$, formally:
 
-$$\mathbf{Q}[\omega_k \mid f^t_h] = \frac{\mathbf{Q}[{\omega_k} \cap f^t+h]}{\mathbf{Q[f^t_h]}} = \begin{cases}
+$$\mathbf{Q}[\omega_k \mid f^t_h] = \frac{\mathbf{Q}[{\omega_k} \cap f^{t+h}]}{\mathbf{Q[f^t_h]}} = \begin{cases}
  \frac{\mathcal{Q}[\omega_k]}{\mathcal{Q}[f^t_h]} \; \text {if} \; \omega_k \in f^t_h \\[1pt]
  0 \; \text{otherwise} \end{cases}
  $$
@@ -74,7 +74,7 @@ $$\mathbf{Q}[\omega_k \mid f^t_h] = \frac{\mathbf{Q}[{\omega_k} \cap f^t+h]}{\ma
 
 - definition of independence of variable and information set wrt probability measure $\mathcal{P}$
 
-- it holds that $X$ is independent of $\mathcal{P}_t$ wrt $Q$ iff X takes all possible number of realizations on any $f^t_h \iin \mathcal{P}_t$ (weak independence)
+- it holds that $X$ is independent of $\mathcal{P}_t$ wrt $Q$ iff X takes all possible number of realizations on any $f^t_h \in \mathcal{P}_t$ (weak independence)
 
 - $E^Q [ X \mid \mathcal{P}_t] (f^t_h) = E^Q [ X ]$ for all $f^t_h \in \mathcal{P}_t$
 
@@ -969,3 +969,406 @@ $$
 2. $\nu$ is self financing, $V_{\nu} (0) \leq 0$, $Q(\tilde{V}_{\nu} (T) \geq 0) = 1$ and $Q (\tilde{V} (\tau) > 0) > 0$
 
 3. $V(0) = \tilde{V}_{\nu} (0) = E^Q [ \tilde{V}_{\nu} (\tau)] > 0 \implies V_{\nu}(0) > 0 \implies NA$
+
+# Multidimensional diffusive markets # 
+
+Recap: 
+
+- the logarithmic growth of risky security: 
+
+$$ \frac{d S_1(t)}{S_1(t)} = \mu_1 dt + \sqrt{v_1}dW_1^{\mathcal{P}} (t) 
+$$ 
+
+for the risky security
+
+We want to understand how to sum the stochastic component of the price equation: 
+
+$$ \int_0^r \sigma(t) dW(t) 
+$$ 
+
+$$ E^P(\int_0^r \sigma(t) dW(t)) = 0
+$$ 
+
+$$ E^P [ (\int_0^r \sigma(t) dW(t)^2 ] = \int_0^r E^P [\sigma^2 (t) dt] 
+$$ 
+
+$$ \int_0^{\tau} \sigma(t) dW(t) = \int_0^{\tau} \sigma d W(t) = \sigma \int_0^{\tau} dW(t) = \sigma(W(\tau) - W(0)) = \sigma W(\tau)
+$$ 
+
+By Ito's lemma: 
+
+$$ d (ln S(t)) = \int_0^r (\mu(t) - \frac{\sigma^2 (t)}{2}) dt + \int_0^r \sigma dW(t)
+$$ 
+
+This descibes the univariate solution to the Black Scholes model. 
+
+## Dividends ## 
+
+$$ d D(t) = S(t) q dt, \quad \text{q is the dividend yield}
+$$ 
+
+Consider the self financing strategy $\nu$. Its value will evolve according to: 
+
+$$ d V_{\nu} (t) = \nu_0(t) dB(t) + \nu_1 (t) (d S(t) + q S(t) dt)
+$$ 
+
+
+## Non-arbitrage ## 
+
+WTS that there does not exist a seld financing $\nu$ s.t. 
+$ P (V_{\nu} (t) \geq 0) = 1 $ and $ P(V_{\nu}(t) > 0) > 0$ with $ V_{\nu}(0) \leq 0$. 
+
+By the first funadameal theorem of asset pricing, we have non arbitrage iff exists a risk neutral measure $Q$ such that it make $\tilde{G}$ a Q-martingale. 
+
+$$ \tilde{G}(t) = d\tilde{S}(t) + q\tilde{S}(t) dt
+$$ 
+
+Now substitute $ d \tilde{S} (t) = \tilde{S}(t) ((\mu - r) dt + \sigma d W(t)) + q \tilde{S}(t) dt $
+
+Now by Girsanov's theorem, ??? 
+
+Lemma. 
+
+$$ d \tilde{V}_{\nu} (t) = \nu_1 (t) (d \tilde{S} (t) + q \tilde{S} (t) dt)  =\nu_1 (t) \sigma \tilde{S} dW(t) 
+$$ 
+
+## Second fundamental theorem of asset pricing and replication ## 
+
+1. by SFTAP: exists a unique RN measure $Q$ s.t. the market is complete and arbitrage free
+2. Implies any European derivative can be replicated: 
+
+$$ X(t) \text{ payoff of t}
+$$ 
+
+We want to constuct X s.t. $\tilde{V}_{\nu} (t) = \tilde{X}(t)$ holds for all t. 
+
+We must have 
+
+$$ \tilde{V}_X(t) = \tilde{V}_{\nu} (t)
+$$ 
+
+In words, the value of the replicating portfolio $\nu$ must be equal to the value of derivative X at each point in time. 
+
+Since $\tilde{V}_{\nu}$ is a Q-martingale, it must also hold that $E^Q_t[\tilde{V}_{\nu (t)}] = E^Q_t [ \tilde{X} (t)]$
+
+## Martingality extension of Black-Scholes ## 
+
+$$
+\begin{aligned}
+\frac{dS_i(t)}{S_i(t)}
+&=
+\mu_i\,dt + \sigma_i\,dW(t)
+&& i=1,2.
+\end{aligned}
+$$
+
+We use $Cov_t (\frac{d S_1}{S_1}, \frac{d S_2}{S_2}) = 1$ 
+
+$$ 
+\begin{aligned}
+\operatorname{Cov}_t^P
+\left(
+\frac{dS_1}{S_1},
+\frac{dS_2}{S_2}
+\right)
+&=
+\operatorname{Cov}_t^P
+\left(
+\mu_1\,dt+\sigma_1\,dW(t),
+\mu_2\,dt+\sigma_2\,dW(t)
+\right)
+\\
+&=
+\operatorname{Cov}_t^P
+\left(
+\sigma_1\,dW(t),
+\sigma_2\,dW(t)
+\right)
+\\
+&=
+\sigma_1\sigma_2\,
+\operatorname{Cov}_t^P
+\left(
+dW(t),dW(t)
+\right)
+\\
+&=
+\sigma_1\sigma_2\,dt.
+\end{aligned}
+$$
+
+
+$$ Corr_t^P (\frac{d S_1}{S_1}, \frac{d S_2}{S_2}) = \frac{\sigma_1 \sigma_2 dt}{\sqrt{\sigma_1^2 dt} \sqrt{\sigma_2^2 dt}} = 1 
+$$
+
+Now, ;ets define $\simga_1 = \sqrt{v_1}$ 
+
+Moreover, we introduce correlation for the other security: 
+
+$$ \frac{d S_2 (t)}{S_2 (t)} = \mu_2 dt + \rho \sqrt{v_2} dW^P_1(t) + \sqrt{v_2 (1 - {\rho}^2)}dW_2^P(t)
+$$ 
+
+We have
+$$ Var_t^P [\frac{d S_1}{S_1}] = (\sqrt{v_1})^2 dt = v_1 dt 
+$$ 
+
+
+And 
+
+$$ Cor(\frac{d S_1 (t)}{S_1(t)}, \frac{d S_2 (t)}{S_2 (t)}) = \rho 
+$$ 
+
+## Covariance between assets ## 
+
+$$ \sum^k_{j,l = 1} Cov_t (\sigma_{3j} dW_j (t), \sigma_{1l} dW_l(t)) = \sum_{j = l =1}^{k} \sigma_{3j} \sigma_{1l} Cov_t (d W_j (t), d W_j (t) ) = \langle \sigma_3, \sigma_1 \rangle dt 
+$$ 
+
+Rewrite the discounted price process as: 
+
+$$ d \tilde{S}_i (t) = d (S_i (t) e^{-nt}) = \tilde{S}_i (t) ((\mu_i - r) dt + \sigma_i d W(t))
+$$ 
+
+Now discount the gain by price: 
+
+$$ \frac{d \tilde{G}_i (t)}{\tilde{S}_i (t)} = \underbrace{(\mu_i + q_i - r)}_{\sigma_i \alpha} dt + \sigma_i d W(t) = \sigma_i (\alpha dt + d W(t)) 
+$$ 
+
+Goal: find unique $Q \sim P$ to define $W^Q(t)$ s.t. 
+
+$$ d W^Q(t) = dW(t) + \alpha dt
+$$ 
+
+defines $W^Q$, k-dim Q std. brownian motion (existence guaranteed by Girsanov's theorem). 
+
+$$
+\begin{aligned}
+E_t^Q[d\tilde{G}_i(t)]
+&=
+\tilde{S}_i(t)\,
+E_t^Q[\sigma_i\,dW^Q(t)]
+\\
+&=
+\tilde{S}_i(t)\,
+E_t^Q\left[
+\sum_{j=1}^{k}
+\sigma_{ij}\,dW_j^Q(t)
+\right]
+\\
+&=
+\tilde{S}_i(t)
+\sum_{j=1}^{k}
+E_t^Q\left[
+\sigma_{ij}\,dW_j^Q(t)
+\right]
+\\
+&=
+0.
+\end{aligned}
+$$
+
+
+We solve a linear system: 
+
+$$ \begin{cases} \sigma_1 \alpha &= \mu_1 + q_1  - r \\
+\sigma_2 \alpha  &= \mu_2 + q_2 - r \\ 
+&\vdots \\
+\sigma_d \alpha &= \mu_d + q_d - r \end{cases}
+$$ 
+
+The system has infinite solutions whenever $rk[\sigma_{ij}] = d < k$, no arbitrage will hold but the market will be incomplete. 
+If $rk[\sigma_{i,j}] = k = d$, then the market is complete and no arbitrage holds. (k is the dim of the risk factor $\sigma$)
+
+## Solution to the system of equations ## 
+
+By applying Ito's lemma to $Y(t) = ln (S_i (t))$ after using the second order taylor expansion of $Y(t)$ we get: 
+
+
+$$ \begin{aligned} b_1 &= S_1(t) \sigma_1 \\ 
+b_2 &= S_3(t) \sigma_3 \end{aligned} 
+$$ 
+
+$$\frac{d S_5 (t)}{S_5(t)} = \mu_5 dt + \sigma_5 dW(t) 
+$$ 
+
+$$ f(t, S_1 (t), \dots, S_d (t)) = ln S_5 (t)
+$$ 
+
+
+We have that $\frac{\partial{f}}{\partial{t}} = 0$, $\frac{\partial{f}}{\partial{x_i}} = 0 \quad i \neq 5$, $\frac{\partial^2 f}{\partial{x_i} \partial{x_j}} = 0 \quad \forall i, j \neq 5$ 
+
+and $ \frac{\partial^2 f}{\partial x_5} = - \frac{1}{x^2_5}$
+
+Thus 
+
+$$ d (ln S_5 (t)) = O + O \frac{1}{S_5 (t)} d S_5 (t) + \frac{1}{2} ( - \frac{1}{S^2_5 (t)}) S^2_5 (t) \sigma_5 \sigma_6 dt = (\mu_5 dt + \sigma_5 d W(t)) - \frac{1}{2} \lVert \sigma_5 \rVert^2 dt
+$$ 
+
+now recall that: 
+
+$$ W^Q (t) = W^P (t) + vt 
+$$ 
+
+is a std Brownian under $Q$ due to Girsanov, and so: 
+
+
+$S_5$ is marginally distributed on: 
+
+$$ \sigma_5 W^Q (\tau) = \sum_{j = 1}^{k} \sigma_{5j} W^Q_j (\tau) \sim N \bigl( 0, \left( \sum_{j =1}^k \sigma^2_{5j} \right)\tau \bigr)
+$$
+
+
+## No arbitrage valuation of derivatives on several underlying assets ## 
+
+Goal: price a European derivative $\{ X \}_{t \in T} $ 
+
+by calculating 
+$$ V(t) = E^Q_t  [e^{-rT} X(T)] \quad \text{ for any t} \in [0, T] 
+$$ 
+
+By the completeness of the market, we know that the security can be replicated. 
+
+We define: $ X(T) = f(S_1 (T), \dots, S_d (T)) = ( \operatorname{max} (\frac{S_1 (T)}{S_1 (0)}, \dots, \frac{S_d (T)}{S_d (0)})) $. 
+
+$$ V_X(t) = E^Q_t [ e^{-r(T-t)} f (S_1 (T), \dots, S_d (T))]
+$$ 
+
+$$
+\begin{aligned}
+S_1(T)
+&=
+S_1(t)\frac{S_1(T)}{S_1(t)}
+\\
+&=
+S_1(t)
+\frac{
+S_1(0)
+e^{
+\left(
+r-q_1-\frac{\lVert\sigma_1\rVert^2}{2}
+\right)T
++
+\sigma_1 W^Q(T)
+}
+}{
+S_1(0)
+e^{
+\left(
+r-q_1-\frac{\lVert\sigma_1\rVert^2}{2}
+\right)t
++
+\sigma_1 W^Q(t)
+}
+}
+\\
+&=
+S_1(t)
+e^{
+\left(
+r-q_1-\frac{\lVert\sigma_1\rVert^2}{2}
+\right)(T-t)
++
+\sigma_1\left(W^Q(T)-W^Q(t)\right)
+}.
+\end{aligned}
+$$
+
+the term $S_1 (t)$ is $F_t$ measurable, while the term $\sigma_1 (W^Q (T) - W^Q (t))$ is $F_t$-independent. 
+
+
+We then face the following PDE: 
+
+$$ \tilde{V}_{X} (t) = F(t, S_1 (t), \dots. S_d (t)) e^{-nt} = \tilde{V}_{\nu} (t) \quad \text{Q-martingale}
+$$ 
+
+We have 
+
+$$ d(F(t, S_1 (t), \dots, S_d(t))e^{-nt}) = \underbrace{( \dots )dt}_{\text{ 0 under PDE}} + (\dots )dW^Q (t) 
+$$ 
+
+Or: hedging portfolio: 
+
+$$ \Pi(t)  = - F(t, S_1 (t), \dots, S_d (t)) + \sum_i^{d} h_i S_i (t) 
+$$ 
+
+locally riskless and self financing strategy, where $h_i$ is hedge ratio with $S_i$. 
+
+$$ d \Pi(t) = - dF + \sum_{i = 1}^{d} h_i (d S_i (t)) + q_i S_i (t) dt ) 
+$$ 
+
+For the $d = 2$ case: 
+
+$$
+\begin{aligned}
+d\Pi(t)
+&=
+-\Bigg(
+\frac{\partial F}{\partial t}\,dt
++
+\sum_{i=1}^{2}
+\frac{\partial F}{\partial x_i}\,dS_i(t)
+\\
+&\qquad\qquad
++
+\frac{1}{2}
+\sum_{i,j=1}^{2}
+\frac{\partial^2 F}
+{\partial x_i \partial x_j}
+S_i(t)S_j(t)
+\langle \sigma_i,\sigma_j\rangle\,dt
+\Bigg)
+\\
+&\qquad
++
+\sum_{i=1}^{2}
+h_i
+\left(
+dS_i(t)+q_iS_i(t)\,dt
+\right)
+\\[0.5em]
+&=
+-\frac{\partial F}{\partial t}\,dt
+-
+\sum_{i=1}^{2}
+\frac{\partial F}{\partial x_i}\,dS_i(t)
+\\
+&\qquad
+-
+\frac{1}{2}
+\sum_{i,j=1}^{2}
+\frac{\partial^2 F}
+{\partial x_i \partial x_j}
+S_i(t)S_j(t)
+\langle \sigma_i,\sigma_j\rangle\,dt
+\\
+&\qquad
++
+\sum_{i=1}^{2}
+\frac{\partial F}{\partial x_i}\,dS_i(t)
++
+\sum_{i=1}^{2}
+q_iS_i(t)
+\frac{\partial F}{\partial x_i}\,dt
+\\[0.5em]
+&=
+\left[
+-\frac{\partial F}{\partial t}
+-
+\frac{1}{2}
+\sum_{i,j=1}^{2}
+\frac{\partial^2 F}
+{\partial x_i \partial x_j}
+S_i(t)S_j(t)
+\langle \sigma_i,\sigma_j\rangle
+\right.
+\\
+&\qquad\qquad
+\left.
++
+\sum_{i=1}^{2}
+q_iS_i(t)
+\frac{\partial F}{\partial x_i}
+\right]dt.
+\end{aligned}
+$$
+
+

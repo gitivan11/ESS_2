@@ -295,7 +295,11 @@ Changes of net equity depend:
 
 ## Income statement ## 
 
-## BS ## 
+## categories ## 
+
+1. Operating - primary business ( dividends, receivables, payments etc.), payment of taxes and interests
+2. Investing - long term assets and debt  +collection of loans
+3. Financing - payment of dividends and interest
 
 ## Pipiline of indirect method ## 
 
@@ -370,9 +374,85 @@ Non monetary then:
 - must be shown separately, as a reconciliation item in the consolidated statement of cash flow. 
 
 
+# Lec. 9: Cash flow statement # 
+
+## From CFOA to OFCF ##
+
+1. Standard: 
+- cash flow from operating activities:  operating - interest and dividend - interest paid - income tax paid = cash flow from operating activities 
+- cash flow from investing = purchase/;sale of tangible/intangible and of financial investments
+- from financing: borrowing from financials. reimbursements, issuance of equity and dividends paid
+2. reformulated: 
+ - operating cash flow +- purchase or sale of tangible and intangible assets (CAPEX) = operating free cash flow
+ - interest, financial investments, issuance of equity and other cash flows = net change in cash and cash equivalents. 
+
+ ## Unusual items ## 
+
+ - Both for Balance Sheet and Cash Flow? 
+ - How to reconcile with unusual items in the balance sheet and income statement? : 
+
+   1. unusual provision settlement or restructuring - easy, geenrates cash
+   2. If relatewd to merge expenses, fv adjustmenst of cash hedging, translation adjustments for foreig subsidiaries - not easy!
 
 
+   ## Example: Provision expenses ## 
 
+   - warranties and litigations: warranties classify as usual (recurring) item in income statement, litigation NOT! 
+
+   ## reformualtion of CFS ## 
+   - Redormulated CFS for cash: oeprating cash flow, purchase/sale of tangible/intangible assets (CAPEX) = operating free cash flow
+
+   - cash flow from fin income expenses and **unusual items**
+   - cash flows from financing from third 
+   - cash flows from financing shareholders
+
+   - Reformulation of CFS for NFP: do NOT include financing and invested, as already reflected in net financial position 
+
+## change in NFP ## 
+
+Three types: 
+
+1. Change in nature AND amount: 
+
+- operating free cah flow 
+- other cash flows 
+
+2. change in content but not in amount: 
+
+- borrowings and reimbursements 
+- sale and purchase of securities 
+
+3. change in amount due to accounting valautions and non cash transactions
+
+- change in valuation of fin liabilities 
+- change in fair value and impairments of short term fin assets 
+- non cash transactions affecting NFP components 
+
+**reformualted cash flow statement must present reconciliation in the overall change in Net financial position!** 
+
+## Start from IS ## 
+
+- remove litigation from operating 
+- account for the loss which is difference between write off and allowance for receivables **??*
+
+
+## Clarifications ## 
+
+- CFOA $\neq$ OCF!
+- OFCF calculated before or after taxes 
+- OFCF after taxes is the unlevered cash flow 
+- free cash flow = cash flow from operating activities - CAPEX 
+
+
+# Lec 10: ratios # 
+
+## CFOA-CAPEX ## 
+
+- use CFOA from net income and adjust for interest and tax as opposed to OCF - Capex for free cash flow (the latter stsrts from operating income)
+
+# Lec. 11: Creative cash flow reporting # 
+
+## 
 
 
 
